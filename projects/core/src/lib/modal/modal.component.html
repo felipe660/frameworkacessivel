@@ -1,0 +1,17 @@
+<div class="backdrop" *ngIf="aberto">
+  <div
+    class="modal"
+    role="dialog"
+    aria-modal="true"
+    tabindex="0"
+    [attr.aria-labelledby]="'titulo-modal'"
+    [attr.aria-describedby]="'descricao-modal'"
+  >
+    <h2 id="titulo-modal">{{ titulo }}</h2>
+    <p id="descricao-modal">{{ descricao }}</p>
+
+    <ng-content></ng-content>
+
+    <button (click)="fecharModal()">Fechar</button>
+  </div>
+</div>
