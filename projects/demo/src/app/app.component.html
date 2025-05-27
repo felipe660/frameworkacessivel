@@ -1,0 +1,19 @@
+<div style="width: 25%; height: 50vh;">
+  <form (ngSubmit)="enviar()">
+    <lib-accessible-input
+      [(modelValue)]="usuario.nome"
+      id="nome"
+      label="Nome completo"
+      ariaLabel="Nome completo"
+      placeholder="Digite seu nome">
+    </lib-accessible-input>
+    <div *ngIf="usuario.nome === ''">
+      <span class="erro">Este campo é obrigatório</span>
+    </div>
+    <accessible-button
+      label="Clique Aqui"
+      ariaLabel="Botão de Clique"
+      (onClick)="handleButtonClick()"
+      ></accessible-button>
+  </form>
+</div>

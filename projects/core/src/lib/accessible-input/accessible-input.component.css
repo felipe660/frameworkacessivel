@@ -1,0 +1,33 @@
+.input-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.input-field {
+  padding: 10px;
+  border: 2px solid #333;
+  font-size: 16px;
+  outline: none;
+}
+
+.input-field:focus {
+  border-color: #005fcc;
+  box-shadow: 0 0 3px 2px rgba(0, 95, 204, 0.5);
+}
+
+.error-message {
+  color: red;
+  font-size: 14px;
+  margin-top: 5px;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  border: 0;
+}

@@ -1,0 +1,11 @@
+<div class="input-wrapper">
+  <label [for]="id" class="visually-hidden">{{ label }}</label>
+  <input
+    [value]="modelValue"
+    (input)="onInputChange($event)"
+    [id]="id"
+    [placeholder]="placeholder"
+    class="input-field"
+    aria-required="true"
+  />
+</div>

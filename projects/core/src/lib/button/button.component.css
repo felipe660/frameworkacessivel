@@ -1,0 +1,19 @@
+button {
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  color: #ffffff;
+  background-color: #007acc;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:focus {
+  outline: 3px solid #ffcc00; /* Foco visível */
+  outline-offset: 2px;
+}
+
+button[disabled] {
+  background-color: #cccccc;
+  cursor: not-allowed;
+}
