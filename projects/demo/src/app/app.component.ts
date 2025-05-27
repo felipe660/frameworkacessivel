@@ -11,8 +11,9 @@ import { CommonModule } from '@angular/common';
   styleUrl: './app.component.scss'
 })
 export class AppComponent {
+
 enviar() {
-throw new Error('Method not implemented.');
+  throw new Error('Method not implemented.');
 }
   title = 'demo';
   usuario = {nome: ''};

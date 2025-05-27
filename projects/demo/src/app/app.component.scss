@@ -1,0 +1,43 @@
+* {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth; /* Scroll suave */
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+    }
+
+    header {
+      background-color: #333;
+      color: white;
+      padding: 20px;
+      position: fixed;
+      width: 100%;
+      top: 0;
+      z-index: 1000;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #ff9900;
+    }
+
+    section {
+      padding: 100px 20px;
+      margin-top: 80px;
+      min-height: 100vh;
+    }
+
+    #inicio { background-color: #f5f5f5; }
+    #sobre { background-color: #ddd; }
+    #projetos { background-color: #bbb; }
+    #contato { background-color: #999; }

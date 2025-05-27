@@ -1,19 +1,59 @@
-<div style="width: 25%; height: 50vh;">
-  <form (ngSubmit)="enviar()">
-    <lib-accessible-input
-      [(modelValue)]="usuario.nome"
-      id="nome"
-      label="Nome completo"
-      ariaLabel="Nome completo"
-      placeholder="Digite seu nome">
-    </lib-accessible-input>
-    <div *ngIf="usuario.nome === ''">
-      <span class="erro">Este campo é obrigatório</span>
-    </div>
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>FrameWork</title>
+</head>
+<body>
+
+  <header>
+    <nav>
+      <a href="#Inicio">Início</a>
+      <a href="#Button">Button</a>
+      <a href="#Input">Input</a>
+      <a href="#Modal">Modal</a>
+    </nav>
+  </header>
+
+  <section id="Inicio">
+    <h1>Bem-vindo</h1>
+    <p>Essa é a seção de início.</p>
+  </section>
+
+  <section id="Button">
+    <h1>Buttons</h1>
+    <p>Informações sobre.</p>
+    
+
     <accessible-button
       label="Clique Aqui"
       ariaLabel="Botão de Clique"
       (onClick)="handleButtonClick()"
       ></accessible-button>
-  </form>
-</div>
+  </section>
+
+  <section id="Input">
+    <h1>Input</h1>
+    <div style="width: 25%; height: 50vh;">
+      <form (ngSubmit)="enviar()">
+        <lib-accessible-input
+          [(modelValue)]="usuario.nome"
+          id="nome"
+          label="Nome completo"
+          ariaLabel="Nome completo"
+          placeholder="Digite seu nome">
+        </lib-accessible-input>
+        <!-- <p>Valor digitado: {{ usuario.nome }}</p> -->
+        <div *ngIf="usuario.nome === ''">
+          <span class="erro">Este campo é obrigatório</span>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <section id="Modal">
+    <h1>Modal</h1>
+  </section>
+
+</body>
+</html>
