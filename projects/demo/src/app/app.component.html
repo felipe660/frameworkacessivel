@@ -6,6 +6,7 @@
       <a href="#Modal">Modal</a>
       <a href="#Table">Table</a>
       <a href="#Select">Select</a>
+      <a href="#Alerts">Alerts</a>
     </nav>
   </header>
 
@@ -122,6 +123,7 @@
   </section>
 
   <section id="Select">
+    <h1 style="font-size: 1.7rem; color: #005fcc;">Select (accessible-select)</h1>
     <accessible-select 
       [label]="'Status do usuário'"
       [id]="'status-select'"
@@ -130,5 +132,26 @@
     </accessible-select>
     <p>Status selecionado: {{ statusSelecionado }}</p>
   </section>
-  
+    <section id="Alerts">
+      <h2>Adicionar Mensagem</h2>
+
+      <form (submit)="addAlert()" style="margin-bottom: 1rem;">
+        <input
+          type="text"
+          [(ngModel)]="novaMensagem"
+          name="mensagem"
+          placeholder="Digite sua mensagem"
+          aria-label="Nova mensagem"
+          style="padding: 0.5rem; font-size: 1rem; width: 300px; margin-right: 0.5rem;"
+        />
+        <button type="submit" style="padding: 0.5rem 1rem;">Adicionar</button>
+      </form>
+
+      <accessible-alert-list
+        [messages]="alertas"
+        (dismiss)="removeAlert($event)">
+      </accessible-alert-list>
+      
+    </section>
+
 

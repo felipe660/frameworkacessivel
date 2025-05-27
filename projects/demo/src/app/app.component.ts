@@ -3,22 +3,24 @@ import { RouterOutlet } from '@angular/router';
 import { AccessibleInputComponent } from '../../../core/src/lib/input/accessible-input.component';
 import { ButtonComponent } from "../../../core/src/lib/button/button.component";
 import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms'; // 👈 importa aqui
 import { ModalComponent } from '../../../core/src/lib/modal/modal.component';
 import { TableComponent } from "../../../core/src/lib/table/table.component";
 import { SelectComponent } from "../../../core/src/lib/select/select.component";
+import { AlertListComponent } from "../../../core/src/lib/alert-list/alert-list.component";
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, ButtonComponent, AccessibleInputComponent, CommonModule, ModalComponent, TableComponent, SelectComponent],
+  imports: [RouterOutlet, ButtonComponent, AccessibleInputComponent, CommonModule, ModalComponent, TableComponent, SelectComponent, AlertListComponent, FormsModule],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
 export class AppComponent {
 
-enviar() {
-  throw new Error('Method not implemented.');
-}
+  
   title = 'FrameWork';
+  statusSelecionado = '';
+  novaMensagem = '';
   modalOpen = false;
   usuario = {nome: ''};
   headers = ['Nome', 'Email', 'Status'];
@@ -32,7 +34,33 @@ enviar() {
   { label: 'Inativo', value: 'inativo' },
   { label: 'Pendente', value: 'pendente' }
   ];
-  statusSelecionado = '';
+  alertas = [
+  { id: 1, text: 'Bem-vindo ao sistema!', ativo: true },
+  { id: 2, text: 'Seu perfil foi atualizado.', ativo: true }
+  ];
+
+  enviar() {
+    throw new Error('Method not implemented.');
+  }
+
+  addAlert() {
+    if (this.novaMensagem.trim()) {
+      const novoId = this.alertas.length > 0 ? Math.max(...this.alertas.map(m => m.id)) + 1 : 1;
+      this.alertas.push({
+        id: novoId,
+        text: this.novaMensagem.trim(),
+        ativo: true
+      });
+      this.novaMensagem = ''; // limpa o campo
+    }
+  }
+
+  removeAlert(id: number) {
+    const alerta = this.alertas.find(msg => msg.id === id);
+    if (alerta) {
+      alerta.ativo = false;
+    }
+  }
 
   handleButtonClick() {
     alert('Botão Acessível clicado!');
