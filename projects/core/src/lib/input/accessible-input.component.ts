@@ -2,7 +2,7 @@ import { Component, EventEmitter, input, Input, Output } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 @Component({
-  selector: 'lib-accessible-input',
+  selector: 'accessible-input',
   imports: [CommonModule],
   templateUrl: './accessible-input.component.html',
   styleUrl: './accessible-input.component.css'

@@ -8,17 +8,43 @@
   </header>
 
   <section id="Home">
-    <h1>Bem-vindo</h1>
-     <p style="margin-top: 10px;">Framework acessível para desenvolvimento web (angular 19+).</p>
-    <p style="margin-top: 10px;">Todos os componentes seguem os princípios da WCAG:</p>
-    <p>Perceptível: texto alternativo e estrutura semântica.</p>
-    <p>Operável: suporte completo a teclado e aria.</p>
-    <p>Compreensível: feedbacks claros e foco visível.</p>
-    <p>Robusto: compatível com leitores de tela como NVDA e VoiceOver.</p>
-  </section>
+  <h1 style="font-size: 2rem; color: #005fcc;">Framework de Componentes Acessíveis (Angular 15+)</h1>
+
+  <p style="font-size: 1.1rem; line-height: 1.6;">
+    Este projeto oferece uma biblioteca de <strong>componentes web acessíveis</strong> desenvolvidos com Angular, com o objetivo de tornar a web mais inclusiva e utilizável para <strong>todas as pessoas</strong>.
+  </p>
+
+  <p style="font-size: 1.1rem; line-height: 1.6;">
+    Baseado nas diretrizes da <strong>WCAG 2.1/2.2</strong>, cada componente foi projetado para garantir:
+  </p>
+
+  <ul style="font-size: 1.05rem; line-height: 1.5; padding-left: 1.5rem;">
+    <li>Navegação completa por teclado</li>
+    <li>Compatibilidade com leitores de tela (NVDA, VoiceOver)</li>
+    <li>Contraste visual adequado e foco visível</li>
+    <li>Uso correto de semântica HTML e atributos <code>aria</code></li>
+  </ul>
+
+  <p style="font-size: 1.1rem; line-height: 1.6;">
+    Este framework facilita o desenvolvimento acessível desde o início, reduzindo a complexidade técnica e promovendo o cumprimento da <strong>Lei Brasileira de Inclusão (LBI)</strong>, além de fomentar a responsabilidade social digital.
+  </p>
+
+  <div style="margin-top: 2rem;">
+    <h2 style="font-size: 1.5rem; color: #333;">Componentes disponíveis:</h2>
+    <ul style="font-size: 1.05rem; line-height: 1.5; padding-left: 1.5rem;">
+      <li><strong>&lt;accessible-button&gt;</strong> – Botão com suporte completo à acessibilidade</li>
+      <li><strong>&lt;accessible-input&gt;</strong> – Campo de entrada com rótulo, foco visível e feedback</li>
+      <li><strong>&lt;lib-modal&gt;</strong> – Modal com foco preso, leitura por leitor de tela e fechamento via teclado</li>
+    </ul>
+  </div>
+
+  <p style="font-size: 1.1rem; line-height: 1.6; margin-top: 1.5rem;">
+    Novos componentes estão em desenvolvimento para ampliar ainda mais a cobertura e acessibilidade das interfaces web.
+  </p>
+</section>
 
   <section id="Button">
-    <h1>Accessible Button (accessible-button) </h1>
+    <h1 style="font-size: 1.7rem; color: #005fcc;">Button (accessible-button) </h1>
     <p>Botão acessível com suporte à navegação por teclado, foco visível e leitura por tecnologias assistivas.</p>
     <p style="margin-top: 10px;">Inputs:🔧 </p>
     <ul>
@@ -41,8 +67,7 @@
   </section>
 
   <section id="Input">
-    <h1>Input</h1>
-    <h1>Accessible Input (lib-accessible-input)</h1>
+    <h1 style="font-size: 1.7rem; color: #005fcc;">Input (accessible-input)</h1>
     <p>Campo de entrada acessível, com rótulo oculto visível para leitores de tela, foco visível, contraste adequado e mensagens de erro compatíveis com ARIA.</p>
     <p style="margin-top: 10px;">Inputs:🔧 </p>
     <ul>
@@ -54,13 +79,13 @@
     </ul>
     <div style="width: 25%; height: 50vh; margin-top: 10px;">
       <form (ngSubmit)="enviar()">
-        <lib-accessible-input
+        <accessible-input
           [(modelValue)]="usuario.nome"
           id="nome"
           label="Nome completo"
           ariaLabel="Nome completo"
           placeholder="Digite seu nome">
-        </lib-accessible-input>
+        </accessible-input>
         <div *ngIf="usuario.nome === ''">
           <span class="erro">Este campo é obrigatório</span>
         </div>
@@ -69,7 +94,7 @@
   </section>
 
   <section id="Modal">
-    <h1>Modal</h1>
+    <h1 style="font-size: 1.7rem; color: #005fcc;">Modal (lib-modal)</h1>
     <accessible-button
       label="Abrir Modal"
       ariaLabel="Botão de Clique"

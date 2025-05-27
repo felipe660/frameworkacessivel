@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { AccessibleInputComponent } from '../../../core/src/lib/accessible-input/accessible-input.component';
+import { AccessibleInputComponent } from '../../../core/src/lib/input/accessible-input.component';
 import { ButtonComponent } from "../../../core/src/lib/button/button.component";
 import { CommonModule } from '@angular/common';
 import { ModalComponent } from '../../../core/src/lib/modal/modal.component';
