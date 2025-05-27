@@ -1,0 +1,19 @@
+<div class="table-container" tabindex="0">
+  <table role="table">
+    <caption>{{ caption }}</caption>
+    <thead>
+      <tr role="row">
+        <th *ngFor="let head of headers" scope="col" role="columnheader">
+          {{ head }}
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let row of data" role="row">
+        <td *ngFor="let cell of row" role="cell">
+          {{ cell }}
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

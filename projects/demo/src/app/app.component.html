@@ -4,6 +4,7 @@
       <a href="#Button">Button</a>
       <a href="#Input">Input</a>
       <a href="#Modal">Modal</a>
+      <a href="#Table">Table</a>
     </nav>
   </header>
 
@@ -95,6 +96,7 @@
 
   <section id="Modal">
     <h1 style="font-size: 1.7rem; color: #005fcc;">Modal (lib-modal)</h1>
+    <!-- <p>Campo de entrada acessível, com rótulo oculto visível para leitores de tela, foco visível, contraste adequado e mensagens de erro compatíveis com ARIA.</p> -->
     <accessible-button
       label="Abrir Modal"
       ariaLabel="Botão de Clique"
@@ -107,3 +109,14 @@
       <p>Conteúdo do modal.</p>
     </lib-modal>
   </section>
+
+  <section id="Table">
+    <h1 style="font-size: 1.7rem; color: #005fcc;">Table (accessible-table)</h1>
+    <!-- <p>Campo de entrada acessível, com rótulo oculto visível para leitores de tela, foco visível, contraste adequado e mensagens de erro compatíveis com ARIA.</p> -->
+    <accessible-table
+      [caption]="'Lista de Usuários'"
+      [headers]="headers"
+      [data]="tableData">
+    </accessible-table>
+  </section>
+
