@@ -5,6 +5,7 @@
       <a href="#Input">Input</a>
       <a href="#Modal">Modal</a>
       <a href="#Table">Table</a>
+      <a href="#Select">Select</a>
     </nav>
   </header>
 
@@ -119,4 +120,15 @@
       [data]="tableData">
     </accessible-table>
   </section>
+
+  <section id="Select">
+    <accessible-select 
+      [label]="'Status do usuário'"
+      [id]="'status-select'"
+      [options]="statusOptions"
+      [(selected)]="statusSelecionado">
+    </accessible-select>
+    <p>Status selecionado: {{ statusSelecionado }}</p>
+  </section>
+  
 

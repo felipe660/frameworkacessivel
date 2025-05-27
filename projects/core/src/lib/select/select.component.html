@@ -1,0 +1,14 @@
+<div class="select-wrapper">
+  <label [for]="id" class="visually-hidden">{{ label }}</label>
+  <select
+    [id]="id"
+    [value]="selected"
+    (change)="onChange($event)"
+    [attr.aria-label]="label"
+  >
+    <option value="" disabled selected hidden>Selecione...</option>
+    <option *ngFor="let opt of options" [value]="opt.value">
+      {{ opt.label }}
+    </option>
+  </select>
+</div>

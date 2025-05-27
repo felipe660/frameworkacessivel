@@ -5,10 +5,11 @@ import { ButtonComponent } from "../../../core/src/lib/button/button.component";
 import { CommonModule } from '@angular/common';
 import { ModalComponent } from '../../../core/src/lib/modal/modal.component';
 import { TableComponent } from "../../../core/src/lib/table/table.component";
+import { SelectComponent } from "../../../core/src/lib/select/select.component";
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, ButtonComponent, AccessibleInputComponent, CommonModule, ModalComponent, TableComponent],
+  imports: [RouterOutlet, ButtonComponent, AccessibleInputComponent, CommonModule, ModalComponent, TableComponent, SelectComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
@@ -26,6 +27,12 @@ enviar() {
     ['Maria Souza', 'maria@email.com', 'Inativo'],
     ['Carlos Lima', 'carlos@email.com', 'Ativo']
   ];
+  statusOptions = [
+  { label: 'Ativo', value: 'ativo' },
+  { label: 'Inativo', value: 'inativo' },
+  { label: 'Pendente', value: 'pendente' }
+  ];
+  statusSelecionado = '';
 
   handleButtonClick() {
     alert('Botão Acessível clicado!');
