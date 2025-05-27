@@ -7,6 +7,7 @@
       <a href="#Table">Table</a>
       <a href="#Select">Select</a>
       <a href="#Alerts">Alerts</a>
+      <a href="#Collapse">Collapse</a>
     </nav>
   </header>
 
@@ -151,7 +152,17 @@
         [messages]="alertas"
         (dismiss)="removeAlert($event)">
       </accessible-alert-list>
+
       
+    </section>
+
+    <section id="Collapse">
+      <h1 style="font-size: 1.7rem; color: #005fcc;">Collapse(accessible-collapse)</h1>
+      <div style="width: 25%; height: 50vh; margin-top: 10px;">
+        <accessible-collapse titulo="Clique para expandir">
+          <p>Este é o conteúdo colapsável. Pode conter texto, listas, imagens, etc.</p>
+        </accessible-collapse>
+      </div>
     </section>
 
 

@@ -8,10 +8,11 @@ import { ModalComponent } from '../../../core/src/lib/modal/modal.component';
 import { TableComponent } from "../../../core/src/lib/table/table.component";
 import { SelectComponent } from "../../../core/src/lib/select/select.component";
 import { AlertListComponent } from "../../../core/src/lib/alert-list/alert-list.component";
+import { CollapseComponent } from "../../../core/src/lib/collapse/collapse.component";
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, ButtonComponent, AccessibleInputComponent, CommonModule, ModalComponent, TableComponent, SelectComponent, AlertListComponent, FormsModule],
+  imports: [RouterOutlet, ButtonComponent, AccessibleInputComponent, CommonModule, ModalComponent, TableComponent, SelectComponent, AlertListComponent, FormsModule, CollapseComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
@@ -35,7 +36,7 @@ export class AppComponent {
   { label: 'Pendente', value: 'pendente' }
   ];
   alertas = [
-  { id: 1, text: 'Bem-vindo ao sistema!', ativo: true },
+  { id: 1, text: 'Bem-vindo!', ativo: true },
   { id: 2, text: 'Seu perfil foi atualizado.', ativo: true }
   ];
 

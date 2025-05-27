@@ -1,0 +1,29 @@
+.collapse-wrapper {
+  margin: 1rem 0;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.collapse-button {
+  width: 100%;
+  text-align: left;
+  padding: 1rem;
+  font-size: 1rem;
+  font-weight: bold;
+  border: none;
+  background-color: #f4f4f4;
+  cursor: pointer;
+  outline: none;
+}
+
+.collapse-button:focus {
+  outline: 2px solid #005fcc;
+}
+
+.collapse-content {
+  padding: 1rem;
+  background-color: #fff;
+  border-top: 1px solid #ccc;
+  transition: max-height 0.3s ease-in-out;
+}

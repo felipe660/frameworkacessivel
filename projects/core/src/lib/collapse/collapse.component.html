@@ -1,0 +1,21 @@
+<div class="collapse-wrapper">
+  <button
+    class="collapse-button"
+    (click)="toggle()"
+    [attr.aria-expanded]="aberto"
+    [attr.aria-controls]="'conteudo-colapsavel'"
+    id="cabecalho-colapsavel"
+  >
+    {{ titulo }}
+  </button>
+
+  <div
+    [id]="'conteudo-colapsavel'"
+    class="collapse-content"
+    [hidden]="!aberto"
+    role="region"
+    [attr.aria-labelledby]="'cabecalho-colapsavel'"
+  >
+    <ng-content></ng-content>
+  </div>
+</div>
