@@ -8,6 +8,7 @@
       <a href="#Select">Select</a>
       <a href="#Alerts">Alerts</a>
       <a href="#Collapse">Collapse</a>
+      <a href="#Dropdown">Dropdown</a>
     </nav>
   </header>
 
@@ -157,12 +158,22 @@
     </section>
 
     <section id="Collapse">
-      <h1 style="font-size: 1.7rem; color: #005fcc;">Collapse(accessible-collapse)</h1>
+      <h1 style="font-size: 1.7rem; color: #005fcc;">Collapse (accessible-collapse)</h1>
       <div style="width: 25%; height: 50vh; margin-top: 10px;">
         <accessible-collapse titulo="Clique para expandir">
           <p>Este é o conteúdo colapsável. Pode conter texto, listas, imagens, etc.</p>
         </accessible-collapse>
       </div>
     </section>
+    <section id="Dropdown">
+      <h1 style="font-size: 1.7rem; color: #005fcc;">Dropdown (accessible-dropdown)</h1>
+      <accessible-dropdown
+        [label]="'Menu de opções'"
+        [options]="opcoesMenu"
+        (selected)="selecionarOpcao($event)">
+      </accessible-dropdown>
+    </section>
+    
+
 
 
