@@ -1,32 +1,57 @@
   <header>
     <nav>
-      <a href="#Inicio">Início</a>
+      <a href="#Home">Home</a>
       <a href="#Button">Button</a>
       <a href="#Input">Input</a>
       <a href="#Modal">Modal</a>
     </nav>
   </header>
 
-  <section id="Inicio">
+  <section id="Home">
     <h1>Bem-vindo</h1>
-    <p>Essa é a seção de início.</p>
+    <p style="margin-top: 10px;">Todos os componentes seguem os princípios POUR da WCAG:</p>
+    <p>Perceptível: texto alternativo e estrutura semântica.</p>
+    <p>Operável: suporte completo a teclado e aria-*.</p>
+    <p>Compreensível: feedbacks claros e foco visível.</p>
+    <p>Robusto: compatível com leitores de tela como NVDA e VoiceOver.</p>
   </section>
 
   <section id="Button">
-    <h1>Buttons</h1>
-    <p>Informações sobre.</p>
-    
-
+    <h1>Accessible Button (accessible-button) </h1>
+    <p>Botão acessível com suporte à navegação por teclado, foco visível e leitura por tecnologias assistivas.</p>
+    <p style="margin-top: 10px;">Inputs:🔧 </p>
+    <ul>
+      <li>label: texto visível do botão</li>
+      <li>ariaLabel: rótulo para leitores de tela.</li>
+    </ul>
+    <p style="margin-top: 10px;">Output:🎯 </p>
+    <ul>
+      <li>(onClick): evento emitido ao clicar no botão.</li>
+    </ul>
+    <h3 style="margin-top: 10px;">Exemplo de uso:</h3>
+    <p>html</p>
+    <img src="/imgs/button.png" alt="Imagem Botão">
+    <p style="margin-top: 10px;"></p>
     <accessible-button
       label="Clique Aqui"
       ariaLabel="Botão de Clique"
       (onClick)="handleButtonClick()"
-      ></accessible-button>
+    ></accessible-button>
   </section>
 
   <section id="Input">
     <h1>Input</h1>
-    <div style="width: 25%; height: 50vh;">
+    <h1>Accessible Input (lib-accessible-input)</h1>
+    <p>Campo de entrada acessível, com rótulo oculto visível para leitores de tela, foco visível, contraste adequado e mensagens de erro compatíveis com ARIA.</p>
+    <p style="margin-top: 10px;">Inputs:🔧 </p>
+    <ul>
+      <li>label: texto visível do botão.</li>
+      <li>ariaLabel: rótulo para leitores de tela.</li>
+      <li>id: identificador único.</li>
+      <li>binding bidirecional com o valor digitado.</li>
+      <li>placeholder: texto de dica.</li>
+    </ul>
+    <div style="width: 25%; height: 50vh; margin-top: 10px;">
       <form (ngSubmit)="enviar()">
         <lib-accessible-input
           [(modelValue)]="usuario.nome"
@@ -35,7 +60,6 @@
           ariaLabel="Nome completo"
           placeholder="Digite seu nome">
         </lib-accessible-input>
-        <!-- <p>Valor digitado: {{ usuario.nome }}</p> -->
         <div *ngIf="usuario.nome === ''">
           <span class="erro">Este campo é obrigatório</span>
         </div>
