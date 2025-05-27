@@ -1,10 +1,11 @@
 import { CommonModule } from '@angular/common';
 import { Component, ElementRef, EventEmitter, HostListener, Input, Output } from '@angular/core';
+import { ButtonComponent } from "../button/button.component";
 
 @Component({
   selector: 'lib-modal',
   standalone: true, // 👈 adicione esta linha
-  imports: [CommonModule],
+  imports: [CommonModule, ButtonComponent],
   templateUrl: './modal.component.html',
   styleUrl: './modal.component.css'
 })

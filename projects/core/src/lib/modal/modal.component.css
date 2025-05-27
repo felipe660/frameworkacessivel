@@ -12,12 +12,19 @@
 }
 
 .modal {
+  position: relative;
   background: white;
-  padding: 2rem;
-  max-width: 500px;
+  padding: 1rem;
+  max-width: 600px;
   width: 90%;
   border-radius: 8px;
-  outline: none;
+  /* outline: none; */
+}
+
+.fechar-botao {
+  position: absolute;
+  top: 8px;
+  right: 8px;
 }
 
 .modal:focus {

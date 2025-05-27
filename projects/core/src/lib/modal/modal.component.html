@@ -7,11 +7,15 @@
     [attr.aria-labelledby]="'titulo-modal'"
     [attr.aria-describedby]="'descricao-modal'"
   >
-    <h2 id="titulo-modal">{{ titulo }}</h2>
-    <p id="descricao-modal">{{ descricao }}</p>
-
+    <div>
+        <accessible-button
+            class="fechar-botao"
+            label="X"
+            ariaLabel="Botão de Clique"
+            (onClick)="fecharModal()"
+        ></accessible-button>
+    </div>
+    <h1 style="margin: 0px 0px 10px 0px;" id="titulo-modal">{{ titulo }}</h1>
     <ng-content></ng-content>
-
-    <button (click)="fecharModal()">Fechar</button>
   </div>
 </div>

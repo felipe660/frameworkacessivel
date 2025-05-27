@@ -9,9 +9,10 @@
 
   <section id="Home">
     <h1>Bem-vindo</h1>
-    <p style="margin-top: 10px;">Todos os componentes seguem os princípios POUR da WCAG:</p>
+     <p style="margin-top: 10px;">Framework acessível para desenvolvimento web (angular 19+).</p>
+    <p style="margin-top: 10px;">Todos os componentes seguem os princípios da WCAG:</p>
     <p>Perceptível: texto alternativo e estrutura semântica.</p>
-    <p>Operável: suporte completo a teclado e aria-*.</p>
+    <p>Operável: suporte completo a teclado e aria.</p>
     <p>Compreensível: feedbacks claros e foco visível.</p>
     <p>Robusto: compatível com leitores de tela como NVDA e VoiceOver.</p>
   </section>
@@ -69,11 +70,14 @@
 
   <section id="Modal">
     <h1>Modal</h1>
-    <button (click)="openModal()">Abrir Modal</button>
+    <accessible-button
+      label="Abrir Modal"
+      ariaLabel="Botão de Clique"
+      (onClick)="openModal()"
+    ></accessible-button>
     <lib-modal
       [aberto]="modalOpen"
       [titulo]="'Atenção!'"
-      [descricao]="'Este é um aviso importante.'"
       (fechado)="closeModal()">
       <p>Conteúdo do modal.</p>
     </lib-modal>
