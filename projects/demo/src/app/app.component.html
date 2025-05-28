@@ -9,47 +9,48 @@
       <a href="#Alerts">Alerts</a>
       <a href="#Collapse">Collapse</a>
       <a href="#Dropdown">Dropdown</a>
+      <a href="#Install">Install</a>
       <!-- <a href="#Donate">Donate</a> -->
     </nav>
   </header>
 
-  <section id="Home">
-  <h1 style="font-size: 2rem; color: #005fcc;">Framework de Componentes Acessíveis (Angular 15+)</h1>
+  <section style="padding-left: 50px;" id="Home">
+    <h1 style="font-size: 2rem; color: #005fcc;">Framework de Componentes Acessíveis (Angular 15+)</h1>
 
-  <p style="font-size: 1.1rem; line-height: 1.6;">
-    Este projeto oferece uma biblioteca de <strong>componentes web acessíveis</strong> desenvolvidos com Angular, com o objetivo de tornar a web mais inclusiva e utilizável para <strong>todas as pessoas</strong>.
-  </p>
+    <p style="font-size: 1.1rem; line-height: 1.6;">
+      Este projeto oferece uma biblioteca de <strong>componentes web acessíveis</strong> desenvolvidos com Angular, com o objetivo de tornar a web mais inclusiva e utilizável para <strong>todas as pessoas</strong>.
+    </p>
 
-  <p style="font-size: 1.1rem; line-height: 1.6;">
-    Baseado nas diretrizes da <strong>WCAG 2.1/2.2</strong>, cada componente foi projetado para garantir:
-  </p>
+    <p style="font-size: 1.1rem; line-height: 1.6;">
+      Baseado nas diretrizes da <strong>WCAG 2.1/2.2</strong>, cada componente foi projetado para garantir:
+    </p>
 
-  <ul style="font-size: 1.05rem; line-height: 1.5; padding-left: 1.5rem;">
-    <li>Navegação completa por teclado</li>
-    <li>Compatibilidade com leitores de tela (NVDA, VoiceOver)</li>
-    <li>Contraste visual adequado e foco visível</li>
-    <li>Uso correto de semântica HTML e atributos <code>aria</code></li>
-  </ul>
-
-  <p style="font-size: 1.1rem; line-height: 1.6;">
-    Este framework facilita o desenvolvimento acessível desde o início, reduzindo a complexidade técnica e promovendo o cumprimento da <strong>Lei Brasileira de Inclusão (LBI)</strong>, além de fomentar a responsabilidade social digital.
-  </p>
-
-  <div style="margin-top: 2rem;">
-    <h2 style="font-size: 1.5rem; color: #333;">Componentes disponíveis:</h2>
     <ul style="font-size: 1.05rem; line-height: 1.5; padding-left: 1.5rem;">
-      <li><strong>&lt;accessible-button&gt;</strong> – Botão com suporte completo à acessibilidade</li>
-      <li><strong>&lt;accessible-input&gt;</strong> – Campo de entrada com rótulo, foco visível e feedback</li>
-      <li><strong>&lt;lib-modal&gt;</strong> – Modal com foco preso, leitura por leitor de tela e fechamento via teclado</li>
+      <li>Navegação completa por teclado</li>
+      <li>Compatibilidade com leitores de tela</li>
+      <li>Contraste visual adequado e foco visível</li>
+      <li>Uso correto de semântica HTML e atributos <code>aria</code></li>
     </ul>
-  </div>
 
-  <p style="font-size: 1.1rem; line-height: 1.6; margin-top: 1.5rem;">
-    Novos componentes estão em desenvolvimento para ampliar ainda mais a cobertura e acessibilidade das interfaces web.
-  </p>
-</section>
+    <p style="font-size: 1.1rem; line-height: 1.6;">
+      Este framework facilita o desenvolvimento acessível desde o início, reduzindo a complexidade técnica e promovendo o cumprimento da <strong>Lei Brasileira de Inclusão (LBI)</strong>, além de fomentar a responsabilidade social digital.
+    </p>
 
-  <section id="Button">
+    <div style="margin-top: 2rem;">
+      <h2 style="font-size: 1.5rem; color: #333;">Componentes disponíveis:</h2>
+      <ul style="font-size: 1.05rem; line-height: 1.5; padding-left: 1.5rem;">
+        <li><strong>&lt;accessible-button&gt;</strong> – Botão com suporte completo à acessibilidade</li>
+        <li><strong>&lt;accessible-input&gt;</strong> – Campo de entrada com rótulo, foco visível e feedback</li>
+        <li><strong>&lt;lib-modal&gt;</strong> – Modal com foco preso, leitura por leitor de tela e fechamento via teclado</li>
+      </ul>
+    </div>
+
+    <p style="font-size: 1.1rem; line-height: 1.6; margin-top: 1.5rem;">
+      Novos componentes estão em desenvolvimento para ampliar ainda mais a cobertura e acessibilidade das interfaces web.
+    </p>
+  </section>
+
+  <section style="padding-left: 50px;" id="Button">
     <h1 style="font-size: 1.7rem; color: #005fcc;">Button (accessible-button) </h1>
     <p>Botão acessível com suporte à navegação por teclado, foco visível e leitura por tecnologias assistivas.</p>
     <p style="margin-top: 10px;">Inputs:🔧 </p>
@@ -61,7 +62,7 @@
     <ul>
       <li>(onClick): evento emitido ao clicar no botão.</li>
     </ul>
-    <h3 style="margin-top: 10px;">Exemplo de uso:</h3>
+    <h4 style="margin-top: 10px;">Exemplo de uso:</h4>
     <p>html</p>
     <img src="/imgs/button.png" alt="Imagem Botão">
     <p style="margin-top: 10px;"></p>
@@ -72,7 +73,7 @@
     ></accessible-button>
   </section>
 
-  <section id="Input">
+  <section style="padding-left: 50px;" id="Input">
     <h1 style="font-size: 1.7rem; color: #005fcc;">Input (accessible-input)</h1>
     <p>Campo de entrada acessível, com rótulo oculto visível para leitores de tela, foco visível, contraste adequado e mensagens de erro compatíveis com ARIA.</p>
     <p style="margin-top: 10px;">Inputs:🔧 </p>
@@ -83,30 +84,50 @@
       <li>binding bidirecional com o valor digitado.</li>
       <li>placeholder: texto de dica.</li>
     </ul>
+    <h4 style="margin-top: 10px;">Exemplo de uso:</h4>
+    <p>html</p>
+    <img src="/imgs/input.png" alt="Imagem Input">
     <div style="width: 25%; height: 50vh; margin-top: 10px;">
-      <form (ngSubmit)="enviar()">
+      <form (ngSubmit)="send()">
         <accessible-input
-          [(modelValue)]="usuario.nome"
+          [(modelValue)]="user.name"
           id="nome"
           label="Nome completo"
           ariaLabel="Nome completo"
           placeholder="Digite seu nome">
         </accessible-input>
-        <div *ngIf="usuario.nome === ''">
+        <div style="margin-top: 10px;" *ngIf="user.name === ''">
           <span class="erro">Este campo é obrigatório</span>
         </div>
       </form>
     </div>
   </section>
 
-  <section id="Modal">
+  <section style="padding-left: 50px;" id="Modal">
     <h1 style="font-size: 1.7rem; color: #005fcc;">Modal (lib-modal)</h1>
-    <!-- <p>Campo de entrada acessível, com rótulo oculto visível para leitores de tela, foco visível, contraste adequado e mensagens de erro compatíveis com ARIA.</p> -->
+    <p>Modal acessível que garante foco preso enquanto aberto, leitura por tecnologias assistivas e fechamento via teclado (Esc). Compatível com leitores de tela e com contraste adequado.</p>
+
+    <p style="margin-top: 10px;">Inputs:🔧 </p>
+    <ul>
+      <li>aberto: define se o modal está visível.</li>
+      <li>titulo: título descritivo do modal.</li>
+    </ul>
+
+    <p style="margin-top: 10px;">Output:🎯 </p>
+    <ul>
+      <li>(fechado): evento emitido ao fechar o modal.</li>
+    </ul>
+
+    <h4 style="margin-top: 10px;">Exemplo de uso:</h4>
+    <p>html</p>
+    <img src="/imgs/button.png" alt="Imagem Modal">
+    <p style="margin-top: 10px;"></p>
     <accessible-button
       label="Abrir Modal"
-      ariaLabel="Botão de Clique"
-      (onClick)="openModal()"
-    ></accessible-button>
+      ariaLabel="Botão para abrir Modal"
+      (onClick)="openModal()">
+    </accessible-button>
+
     <lib-modal
       [aberto]="modalOpen"
       [titulo]="'Atenção!'"
@@ -115,72 +136,153 @@
     </lib-modal>
   </section>
 
-  <section id="Table">
+  <section style="padding-left: 50px;" id="Table">
     <h1 style="font-size: 1.7rem; color: #005fcc;">Table (accessible-table)</h1>
-    <!-- <p>Campo de entrada acessível, com rótulo oculto visível para leitores de tela, foco visível, contraste adequado e mensagens de erro compatíveis com ARIA.</p> -->
+    <p>Tabela acessível com uso de semântica adequada, legenda descritiva e compatível com tecnologias assistivas e navegação por teclado.</p>
+
+    <p style="margin-top: 10px;">Inputs:🔧 </p>
+    <ul>
+      <li>caption: legenda descritiva da tabela.</li>
+      <li>headers: cabeçalhos das colunas.</li>
+      <li>data: dados a serem exibidos.</li>
+    </ul>
+
+    <h4 style="margin-top: 10px;">Exemplo de uso:</h4>
+    <p>html</p>
+    <img src="/imgs/button.png" alt="Imagem Tabela">
+
     <accessible-table
       [caption]="'Lista de Usuários'"
       [headers]="headers"
       [data]="tableData">
     </accessible-table>
+
   </section>
 
-  <section id="Select">
+  <section style="padding-left: 50px;" id="Select">
     <h1 style="font-size: 1.7rem; color: #005fcc;">Select (accessible-select)</h1>
+    <p>Componente de seleção acessível, com foco visível, semântica correta e uso de ARIA para garantir compatibilidade com leitores de tela.</p>
+
+    <p style="margin-top: 10px;">Inputs:🔧 </p>
+    <ul>
+      <li>label: rótulo descritivo da seleção.</li>
+      <li>id: identificador único do campo.</li>
+      <li>options: lista de opções disponíveis.</li>
+      <li>selected: valor selecionado.</li>
+    </ul>
+
+    <p style="margin-top: 10px;">Output:🎯 </p>
+    <ul>
+      <li>(selected): evento emitido ao alterar a seleção.</li>
+    </ul>
+
+    <h4 style="margin-top: 10px;">Exemplo de uso:</h4>
+    <p>html</p>
+    <img style="margin-bottom: 10px;" src="/imgs/input.png" alt="Imagem Select">
+
     <accessible-select 
       [label]="'Status do usuário'"
       [id]="'status-select'"
       [options]="statusOptions"
-      [(selected)]="statusSelecionado">
+      [(selected)]="selectStatus">
     </accessible-select>
-    <p>Status selecionado: {{ statusSelecionado }}</p>
+
+    <p>Status selecionado: {{ selectStatus }}</p>
   </section>
-    <section id="Alerts">
-      <h2>Alertas</h2>
-      <form (submit)="addAlert()" style="margin-bottom: 1rem;">
-        <input
-          type="text"
-          [(ngModel)]="novaMensagem"
-          name="mensagem"
-          placeholder="Adicione um alerta"
-          aria-label="Nova mensagem"
-          style="padding: 0.5rem; font-size: 1rem; width: 300px; margin-right: 0.5rem;"
-        />
-        <button type="submit" style="padding: 0.5rem 1rem;">Adicionar</button>
-      </form>
+  <section style="padding-left: 50px;" id="Alerts">
+    <h1 style="font-size: 1.7rem; color: #005fcc;">Alerts (accessible-alert-list)</h1>
+    <p>Lista de alertas acessíveis, com uso de ARIA live regions para notificações em tempo real e suporte à remoção via interação.</p>
 
-      <accessible-alert-list
-        [messages]="alertas"
-        (dismiss)="removeAlert($event)">
-      </accessible-alert-list>
-    </section>
+    <p style="margin-top: 10px;">Inputs:🔧 </p>
+    <ul>
+      <li>messages: lista de mensagens de alerta.</li>
+    </ul>
 
-    <section id="Collapse">
-      <h1 style="font-size: 1.7rem; color: #005fcc;">Collapse (accessible-collapse)</h1>
-      <div style="width: 25%; height: 50vh; margin-top: 10px;">
-        <accessible-collapse titulo="Clique para expandir">
-          <p>Este é o conteúdo colapsável. Pode conter texto, listas, imagens, etc.</p>
-        </accessible-collapse>
-      </div>
-    </section>
-    <section id="Dropdown">
-      <h1 style="font-size: 1.7rem; color: #005fcc;">Dropdown (accessible-dropdown)</h1>
-      <accessible-dropdown
-        [label]="'Menu de opções'"
-        [options]="opcoesMenu"
-        (selected)="selecionarOpcao($event)">
-      </accessible-dropdown>
-    </section>
-    <!-- <section id="Donate">
-      <h1>Apoie este Framework</h1>
-      <p>Se este projeto te ajuda, considere fazer uma doação para apoiar o desenvolvimento.</p>
-      <a href="https://www.paypal.com/donate/?hosted_button_id=W52WEF5AYNJYY" target="_blank" style="display:inline-block; text-decoration:none;">
-        <svg xmlns="http://www.w3.org/2000/svg" width="200" height="50" viewBox="0 0 200 50">
-          <rect width="200" height="50" rx="8" ry="8" fill="#0070BA"/>
-          <text x="100" y="30" font-family="Arial, sans-serif" font-size="18" fill="white" text-anchor="middle">Doe com PayPal</text>
-        </svg>
-      </a>
-    </section> -->
+    <p style="margin-top: 10px;">Output:🎯 </p>
+    <ul>
+      <li>(dismiss): evento emitido ao fechar um alerta.</li>
+    </ul>
+
+    <h4 style="margin-top: 10px;">Exemplo de uso:</h4>
+    <p>html</p>
+    <img src="/imgs/input.png" alt="Imagem Alerts">
+
+    <form (submit)="addAlert()" style="margin-bottom: 1rem;">
+      <input
+        type="text"
+        [(ngModel)]="newMsg"
+        name="mensagem"
+        placeholder="Adicione um alerta"
+        aria-label="Nova mensagem"
+        style="padding: 0.5rem; font-size: 1rem; width: 300px; margin-right: 0.5rem;">
+      <button type="submit" style="padding: 0.5rem 1rem;">Adicionar</button>
+    </form>
+
+    <accessible-alert-list
+      [messages]="alerts"
+      (dismiss)="removeAlert($event)">
+    </accessible-alert-list>
+  </section>
+
+  <section style="padding-left: 50px;" id="Collapse">
+    <h1 style="font-size: 1.7rem; color: #005fcc;">Collapse (accessible-collapse)</h1>
+    <p>Componente colapsável acessível, com controle de expansão por teclado, foco visível e leitura correta por tecnologias assistivas.</p>
+
+    <p style="margin-top: 10px;">Inputs:🔧 </p>
+    <ul>
+      <li>titulo: texto visível no cabeçalho.</li>
+    </ul>
+
+    <h4 style="margin-top: 10px;">Exemplo de uso:</h4>
+    <p>html</p>
+    <img src="/imgs/button.png" alt="Imagem Collapse">
+
+    <div style="width: 25%; height: 50vh; margin-top: 10px;">
+      <accessible-collapse titulo="Clique para expandir">
+        <p>Este é o conteúdo colapsável. Pode conter texto, listas, imagens, etc.</p>
+      </accessible-collapse>
+    </div>
+  </section>
+  <section style="padding-left: 50px;" id="Dropdown">
+    <h1 style="font-size: 1.7rem; color: #005fcc;">Dropdown (accessible-dropdown)</h1>
+    <p>Menu dropdown acessível, com navegação por teclado, foco visível e suporte a leitores de tela via atributos ARIA.</p>
+
+    <p style="margin-top: 10px;">Inputs:🔧 </p>
+    <ul>
+      <li>label: rótulo descritivo.</li>
+      <li>options: lista de opções.</li>
+    </ul>
+
+    <p style="margin-top: 10px;">Output:🎯 </p>
+    <ul>
+      <li>(selected): evento emitido ao escolher uma opção.</li>
+    </ul>
+
+    <h4 style="margin-top: 10px;">Exemplo de uso:</h4>
+    <p>html</p>
+    <img src="/imgs/input.png" alt="Imagem Dropdown">
+    <p style="margin-bottom: 10px;"></p>
+
+    <accessible-dropdown
+      [label]="'Options'"
+      [options]="menuOptions"
+      (selected)="selectOption($event)">
+    </accessible-dropdown>
+
+  </section>
+  <section style="padding-left: 50px;" id="Install">
+    <h1 style="font-size: 1.7rem; color: #005fcc;">Como instalar</h1>
+  </section>
+  <!-- <section id="Donate">
+    <h1>Apoie este Framework</h1>
+    <p>Se este projeto te ajuda, considere fazer uma doação para apoiar o desenvolvimento.</p>
+    <a href="https://www.paypal.com/donate/?hosted_button_id=W52WEF5AYNJYY" target="_blank" style="display:inline-block; text-decoration:none;">
+      <svg xmlns="http://www.w3.org/2000/svg" width="200" height="50" viewBox="0 0 200 50">
+        <rect width="200" height="50" rx="8" ry="8" fill="#0070BA"/>
+        <text x="100" y="30" font-family="Arial, sans-serif" font-size="18" fill="white" text-anchor="middle">Doe com PayPal</text>
+      </svg>
+    </a>
+  </section> -->
     
 
 

@@ -20,10 +20,10 @@ import { DropdownComponent } from "../../../core/src/lib/dropdown/dropdown.compo
 export class AppComponent {
   
   title = 'FrameWork';
-  statusSelecionado = '';
-  novaMensagem = '';
+  selectStatus = '';
+  newMsg = '';
   modalOpen = false;
-  usuario = {nome: ''};
+  user = {name: ''};
   headers = ['Nome', 'Email', 'Status'];
   tableData = [
     ['João Silva', 'joao@email.com', 'Ativo'],
@@ -35,35 +35,35 @@ export class AppComponent {
   { label: 'Inativo', value: 'inativo' },
   { label: 'Pendente', value: 'pendente' }
   ];
-  alertas = [
+  alerts = [
   { id: 1, text: 'Bem-vindo!', ativo: true },
   { id: 2, text: 'Seu perfil foi atualizado.', ativo: true }
   ];
 
-  opcoesMenu = ['Perfil', 'Configurações', 'Sair'];
+  menuOptions = ['Perfil', 'Configurações', 'Sair'];
 
-  selecionarOpcao(opcao: string) {
+  selectOption(opcao: string) {
     alert(`Opção selecionada: ${opcao}`);
   }
 
-  enviar() {
+  send() {
     throw new Error('Method not implemented.');
   }
 
   addAlert() {
-    if (this.novaMensagem.trim()) {
-      const novoId = this.alertas.length > 0 ? Math.max(...this.alertas.map(m => m.id)) + 1 : 1;
-      this.alertas.push({
+    if (this.newMsg.trim()) {
+      const novoId = this.alerts.length > 0 ? Math.max(...this.alerts.map(m => m.id)) + 1 : 1;
+      this.alerts.push({
         id: novoId,
-        text: this.novaMensagem.trim(),
+        text: this.newMsg.trim(),
         ativo: true
       });
-      this.novaMensagem = ''; // limpa o campo
+      this.newMsg = ''; // limpa o campo
     }
   }
 
   removeAlert(id: number) {
-    const alerta = this.alertas.find(msg => msg.id === id);
+    const alerta = this.alerts.find(msg => msg.id === id);
     if (alerta) {
       alerta.ativo = false;
     }
