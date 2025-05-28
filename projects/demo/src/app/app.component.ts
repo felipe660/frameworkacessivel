@@ -3,7 +3,7 @@ import { RouterOutlet } from '@angular/router';
 import { AccessibleInputComponent } from '../../../core/src/lib/input/accessible-input.component';
 import { ButtonComponent } from "../../../core/src/lib/button/button.component";
 import { CommonModule } from '@angular/common';
-import { FormsModule } from '@angular/forms'; // 👈 importa aqui
+import { FormsModule } from '@angular/forms';
 import { ModalComponent } from '../../../core/src/lib/modal/modal.component';
 import { TableComponent } from "../../../core/src/lib/table/table.component";
 import { SelectComponent } from "../../../core/src/lib/select/select.component";
@@ -18,7 +18,6 @@ import { DropdownComponent } from "../../../core/src/lib/dropdown/dropdown.compo
   styleUrl: './app.component.scss'
 })
 export class AppComponent {
-
   
   title = 'FrameWork';
   statusSelecionado = '';

@@ -9,6 +9,7 @@
       <a href="#Alerts">Alerts</a>
       <a href="#Collapse">Collapse</a>
       <a href="#Dropdown">Dropdown</a>
+      <!-- <a href="#Donate">Donate</a> -->
     </nav>
   </header>
 
@@ -135,14 +136,13 @@
     <p>Status selecionado: {{ statusSelecionado }}</p>
   </section>
     <section id="Alerts">
-      <h2>Adicionar Mensagem</h2>
-
+      <h2>Alertas</h2>
       <form (submit)="addAlert()" style="margin-bottom: 1rem;">
         <input
           type="text"
           [(ngModel)]="novaMensagem"
           name="mensagem"
-          placeholder="Digite sua mensagem"
+          placeholder="Adicione um alerta"
           aria-label="Nova mensagem"
           style="padding: 0.5rem; font-size: 1rem; width: 300px; margin-right: 0.5rem;"
         />
@@ -153,8 +153,6 @@
         [messages]="alertas"
         (dismiss)="removeAlert($event)">
       </accessible-alert-list>
-
-      
     </section>
 
     <section id="Collapse">
@@ -173,6 +171,16 @@
         (selected)="selecionarOpcao($event)">
       </accessible-dropdown>
     </section>
+    <!-- <section id="Donate">
+      <h1>Apoie este Framework</h1>
+      <p>Se este projeto te ajuda, considere fazer uma doação para apoiar o desenvolvimento.</p>
+      <a href="https://www.paypal.com/donate/?hosted_button_id=W52WEF5AYNJYY" target="_blank" style="display:inline-block; text-decoration:none;">
+        <svg xmlns="http://www.w3.org/2000/svg" width="200" height="50" viewBox="0 0 200 50">
+          <rect width="200" height="50" rx="8" ry="8" fill="#0070BA"/>
+          <text x="100" y="30" font-family="Arial, sans-serif" font-size="18" fill="white" text-anchor="middle">Doe com PayPal</text>
+        </svg>
+      </a>
+    </section> -->
     
 
 
