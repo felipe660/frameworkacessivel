@@ -2,10 +2,34 @@ button {
   padding: 0.5rem 1rem;
   font-size: 1rem;
   color: #ffffff;
-  background-color: #007acc;
+  background-color: #005fcc;
   border: none;
   border-radius: 4px;
   cursor: pointer;
+}
+
+.btn-verde {
+  background-color: #22863a;
+  color: white;
+}
+
+.btn-roxo {
+  background-color: #5a32a3;
+  color: white;
+}
+
+.btn-vermelho {
+  background-color: #cc0000;
+  color: white;
+}
+
+.btn-laranja {
+  background-color: #cc5500;
+  color: white;
+}
+
+.btn-cinza {
+  background-color: #333333;
 }
 
 button:focus {

@@ -10,6 +10,7 @@ export class ButtonComponent {
   @Input() ariaLabel?: string;
   @Input() disabled: boolean = false;
   @Input() type: 'button' | 'submit' | 'reset' = 'button';
+  @Input() className: string = '';
 
   @Output() onClick = new EventEmitter<Event>();
 
