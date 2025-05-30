@@ -37,7 +37,7 @@ export class AppComponent {
   ];
   alerts = [
   { id: 1, text: 'Bem-vindo!', ativo: true },
-  { id: 2, text: 'Seu perfil foi atualizado.', ativo: true }
+  { id: 2, text: 'Bem-vindo!', ativo: true },
   ];
 
   menuOptions = ['Perfil', 'Configurações', 'Sair'];
