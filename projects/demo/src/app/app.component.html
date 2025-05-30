@@ -75,6 +75,51 @@
       (onClick)="handleButtonClick()"
     ></accessible-button>
   </section>
+  <section style="padding: 2rem;">
+  <h1 style="font-size: 2rem; color: #005fcc;">🎨 Personalização de Cor no <code>&lt;accessible-button&gt;</code></h1>
+
+  <p>O componente <code>&lt;accessible-button&gt;</code> permite alterar dinamicamente sua cor por meio de <strong>classes personalizadas</strong>. Isso garante flexibilidade visual sem comprometer a acessibilidade.</p>
+  <p>As classes/cores disponiveís são: btn-verde, btn-roxo, btn-azul, btn-vermelho, btn-laranja, btn-cinza.</p>
+
+  <hr>
+
+  <h2>✅ Objetivo</h2>
+  <p>Permitir que o botão tenha <strong>estilização customizada</strong>, mantendo conformidade com as diretrizes de acessibilidade (WCAG 2.1 – contraste mínimo <strong>4.5:1</strong>).</p>
+  <hr>
+
+  <h2>🧩 Como Usar</h2>
+
+  <h3>1. Passe a classe desejada via atributo <code>className</code> no seu html:</h3>
+  <div style="background-color: #f4f4f4; padding: 1rem; border-radius: 6px; font-family: monospace;">
+    &lt;accessible-button<br>
+    &nbsp;&nbsp;label="Salvar"<br>
+    &nbsp;&nbsp;ariaLabel="Botão de Salvar"<br>
+    &nbsp;&nbsp;className="btn-verde"<br>
+    &nbsp;&nbsp;<span style="color: red;">(onClick)="salvar()"</span><br>
+    &gt;&lt;/accessible-button&gt;
+  </div>
+
+  <p style="margin-top: 1rem;"><strong>✅ Todas essas cores possuem contraste ≥ 4.5:1 com o texto branco, garantindo acessibilidade.</strong></p>
+
+  <h2>♿ Por que isso é importante?</h2>
+  <p>Manter o contraste adequado entre o texto e o fundo melhora a legibilidade para:</p>
+  <ul>
+    <li>Pessoas com baixa visão</li>
+    <li>Usuários em ambientes com muito brilho</li>
+    <li>Pessoas com daltonismo</li>
+  </ul>
+
+  <h2>📏 Baseado nas diretrizes:</h2>
+  <p>
+    <a href="https://www.w3.org/WAI/WCAG21/Understanding/contrast-minimum.html" target="_blank" rel="noopener noreferrer">
+      WCAG 2.1 – Critério 1.4.3: Contraste Mínimo
+    </a><br>
+    Contraste mínimo recomendado: <strong>4.5:1</strong> para texto normal.
+  </p>
+
+  <p style="margin-top: 2rem;"><strong>Com essa abordagem, você garante personalização visual + acessibilidade de verdade! ✅</strong></p>
+</section>
+
 
   <section style="padding-left: 50px;" id="Input">
     <h1 style="font-size: 1.7rem; color: #005fcc;">Input (accessible-input)</h1>
