@@ -120,7 +120,7 @@
 
     <h4 style="margin-top: 10px;">Exemplo de uso:</h4>
     <p>html</p>
-    <img src="/imgs/button.png" alt="Imagem Modal">
+    <img src="/imgs/modal.png" alt="Imagem Modal">
     <p style="margin-top: 10px;"></p>
     <accessible-button
       label="Abrir Modal"
@@ -149,7 +149,7 @@
 
     <h4 style="margin-top: 10px;">Exemplo de uso:</h4>
     <p>html</p>
-    <img src="/imgs/button.png" alt="Imagem Tabela">
+    <img src="/imgs/table.png" alt="Imagem Tabela">
 
     <accessible-table
       [caption]="'Lista de Usuários'"
@@ -178,7 +178,7 @@
 
     <h4 style="margin-top: 10px;">Exemplo de uso:</h4>
     <p>html</p>
-    <img style="margin-bottom: 10px;" src="/imgs/input.png" alt="Imagem Select">
+    <img style="margin-bottom: 10px;" src="/imgs/select.png" alt="Imagem Select">
 
     <accessible-select 
       [label]="'Status do usuário'"
@@ -205,7 +205,7 @@
 
     <h4 style="margin-top: 10px;">Exemplo de uso:</h4>
     <p>html</p>
-    <img src="/imgs/input.png" alt="Imagem Alerts">
+    <img src="/imgs/alertlist.png" alt="Imagem Alerts">
 
     <form (submit)="addAlert()" style="margin-bottom: 1rem;">
       <input
@@ -235,7 +235,7 @@
 
     <h4 style="margin-top: 10px;">Exemplo de uso:</h4>
     <p>html</p>
-    <img src="/imgs/button.png" alt="Imagem Collapse">
+    <img src="/imgs/collapse.png" alt="Imagem Collapse">
 
     <div style="width: 25%; height: 50vh; margin-top: 10px;">
       <accessible-collapse titulo="Clique para expandir">
@@ -260,7 +260,7 @@
 
     <h4 style="margin-top: 10px;">Exemplo de uso:</h4>
     <p>html</p>
-    <img src="/imgs/input.png" alt="Imagem Dropdown">
+    <img src="/imgs/dropdown.png" alt="Imagem Dropdown">
     <p style="margin-bottom: 10px;"></p>
 
     <accessible-dropdown
@@ -271,7 +271,15 @@
 
   </section>
   <section style="padding-left: 50px;" id="Install">
-    <h1 style="font-size: 1.7rem; color: #005fcc;">Como instalar</h1>
+    <h1 style="font-size: 1.7rem; color: #005fcc;">1 Como instalar</h1>
+    <p>Para instalar a biblioteca do Framework Acessível no seu projeto Angular, execute o seguinte comando no terminal:</p>
+    <p>npm install framework-acessivel</p>
+    <h1 style="font-size: 1.7rem; color: #005fcc;">2 Importar Modulo</h1>
+    <p>Após a instalação, importe o módulo da biblioteca no seu AppModule ou no módulo onde deseja usar os componentes:</p>
+    <img src="/imgs/modulo.png">
+    <h1 style="font-size: 1.7rem; color: #005fcc;">3 Usando os Componentes</h1>
+    <p>Após importar o AFModule, você ja pode usar os componentes diretamente nos templates, basta alterar os inputs e outputs se necessário. Exemplo com o Botão Acessível:</p>
+    <img src="/imgs/button.png">
   </section>
   <!-- <section id="Donate">
     <h1>Apoie este Framework</h1>
