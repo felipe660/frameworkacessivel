@@ -1,0 +1,22 @@
+.image-wrapper {
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+img.rounded {
+  border-radius: 12px;
+  border: 1px solid #ccc;
+}
+
+figcaption {
+  font-size: 0.9rem;
+  color: #555;
+  margin-top: 0.5rem;
+}

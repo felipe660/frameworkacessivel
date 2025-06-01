@@ -10,10 +10,11 @@ import { SelectComponent } from "../../../core/src/lib/select/select.component";
 import { AlertListComponent } from "../../../core/src/lib/alert-list/alert-list.component";
 import { CollapseComponent } from "../../../core/src/lib/collapse/collapse.component";
 import { DropdownComponent } from "../../../core/src/lib/dropdown/dropdown.component";
+import { ResponsiveImageComponent } from '../../../core/src/lib/responsive-image/responsive-image.component';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, ButtonComponent, AccessibleInputComponent, CommonModule, ModalComponent, TableComponent, SelectComponent, AlertListComponent, FormsModule, CollapseComponent, DropdownComponent],
+  imports: [RouterOutlet, ButtonComponent, ResponsiveImageComponent, AccessibleInputComponent, CommonModule, ModalComponent, TableComponent, SelectComponent, AlertListComponent, FormsModule, CollapseComponent, DropdownComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
