@@ -4,14 +4,14 @@
     role="dialog"
     aria-modal="true"
     tabindex="0"
-    [attr.aria-labelledby]="'titulo-modal'"
-    [attr.aria-describedby]="'descricao-modal'"
+    [attr.aria-label]="titulo"
+    [attr.aria-describedby]="descricao"
   >
     <div>
         <accessible-button
             class="fechar-botao"
             label="X"
-            ariaLabel="Botão de Clique"
+            ariaLabel="Botão fechar Modal"
             (onClick)="fecharModal()"
         ></accessible-button>
     </div>

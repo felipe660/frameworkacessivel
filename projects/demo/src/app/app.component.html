@@ -1,4 +1,4 @@
-  <header style="display: flex; justify-content: center; padding: 1rem;">
+<header style="display: flex; justify-content: center; padding: 1rem;">
   <nav style="display: flex; flex-wrap: wrap; gap: 1rem; justify-content: center;">
     <a href="#home">Home</a>
     <a href="#button">Button</a>
@@ -10,7 +10,7 @@
     <a href="#collapse">Collapse</a>
     <a href="#dropdown">Dropdown</a>
     <a href="#images">Images</a>
-    <a href="#Install">Install</a>
+    <a href="#install">Install</a>
     <!-- <a href="#Donate">Donate</a> -->
   </nav>
 </header>
@@ -255,7 +255,7 @@
 
   <h3 style="margin-top: 1.5rem; color: #333;">🛡️ Acessibilidade garantida:</h3>
   <ul style="line-height: 1.8; font-size: 1rem;">
-    <li>Compatível com leitores de tela (NVDA, JAWS, VoiceOver)</li>
+    <li>Compatível com leitores de tela</li>
     <li>Associação correta entre <code>label</code> e <code>input</code></li>
     <li>Erro com semântica para <code>aria-describedby</code></li>
     <li>Foco visível e suporte a navegação por teclado</li>
@@ -299,6 +299,11 @@
         <td style="padding: 0.5rem;">string</td>
         <td style="padding: 0.5rem;">Título descritivo exibido no cabeçalho do modal</td>
       </tr>
+      <tr>
+        <td style="padding: 0.5rem;"><code>descricao</code></td>
+        <td style="padding: 0.5rem;">string</td>
+        <td style="padding: 0.5rem;">Descrição do modal</td>
+      </tr>
     </tbody>
   </table>
 
@@ -329,23 +334,25 @@
     &lt;lib-modal
       [aberto]="modalOpen"
       [titulo]="'Atenção!'"
+      [descricao]="'Descrição do modal'"
       (fechado)="closeModal()"&gt;
       &lt;p&gt;Conteúdo do modal.&lt;/p&gt;
     &lt;/lib-modal&gt;
   </pre>
 
   <accessible-button
-      label="Abrir Modal"
-      ariaLabel="Botão para abrir Modal"
-      (onClick)="openModal()">
-    </accessible-button>
+    label="Abrir Modal"
+    ariaLabel="Botão para abrir Modal"
+    (onClick)="openModal()">
+  </accessible-button>
 
-    <lib-modal
-      [aberto]="modalOpen"
-      [titulo]="'Atenção!'"
-      (fechado)="closeModal()">
-      <p>Conteúdo do modal.</p>
-    </lib-modal>
+  <lib-modal
+    [aberto]="modalOpen"
+    [titulo]="'Atenção!'"
+    [descricao]="'Descrição do modal'"
+    (fechado)="closeModal()">
+    <p>Conteúdo do modal.</p>
+  </lib-modal>
 
   <!-- <img src="/imgs/modal.png" alt="Exemplo visual de um modal acessível"
     style="margin-top: 1rem; max-width: 100%; border: 1px solid #ccc; border-radius: 4px;" /> -->
@@ -407,6 +414,7 @@
   <pre style="background: #f9f9f9; padding: 1rem; border: 1px solid #ddd; border-radius: 6px; font-size: 0.95rem;">
     &lt;accessible-table
       [caption]="'Lista de Usuários'"
+      aria-describedb="Descrição adicional quando necessário"
       [headers]="headers"
       [data]="tableData"&gt;
     &lt;/accessible-table&gt;
@@ -814,7 +822,8 @@
   <pre style="background: #f9f9f9; padding: 1rem; border: 1px solid #ddd; border-radius: 6px; font-size: 0.95rem;">
     &lt;lib-responsive-image
       src="/imgs/exemplo.png"
-      alt="Diagrama de fluxo do sistema"
+      alt="Descrição da imagem"
+      aria-describedby="Descrição detalhada quando necessário."
       maxWidth="500px"
       [rounded]="true"&gt;
     &lt;/lib-responsive-image&gt;
