@@ -1,2 +1,0 @@
-export default `body{margin:0}*{font-family:Inter,sans-serif}
-`;
