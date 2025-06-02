@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
 import { AccessibleInputComponent } from '../../../core/src/lib/input/accessible-input.component';
 import { ButtonComponent } from "../../../core/src/lib/button/button.component";
 import { CommonModule } from '@angular/common';
@@ -32,9 +31,9 @@ export class AppComponent {
     ['Carlos Lima', 'carlos@email.com', 'Ativo']
   ];
   statusOptions = [
-  { label: 'Ativo', value: 'ativo' },
-  { label: 'Inativo', value: 'inativo' },
-  { label: 'Pendente', value: 'pendente' }
+  { label: 'Ativo', value: 'Ativo' },
+  { label: 'Inativo', value: 'Inativo' },
+  { label: 'Pendente', value: 'Pendente' }
   ];
   alerts = [
   { id: 1, text: 'Bem-vindo!', ativo: true },
