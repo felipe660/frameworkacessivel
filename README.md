@@ -1,59 +1,42 @@
-# FrameworkAcessivel
+#Como baixar o projeto:
+https://github.com/felipe660/frameworkacessivel
+ou simplesmente baixe diretamente pelo drive:
+drive.com.br
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.2.9.
+#Conteúdo dos arquivos
+Dentro da pasta Projects existe o diretório core, referente a biblioteca criada, e o diretório demo, 
+que se trata da pagina referente a exemplos e documentação de uso da biblioteca.
 
-## Development server
 
-To start a local development server, run:
+#Como startar o projeto
+Na pasta Framework-acessivel abra o terminal e digita:
+Npm install
 
-```bash
+Em seguida starte o server:
 ng serve
-```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+Isso vai subir a pagina web referente a pasta demo que está utilizando a biblioteca da pasta core para representar os exemplos.
+Essa foi a maneira encontrada para teste e também documentação, visto que nao tem como rodar a biblioteca isoladamente sem um projeto 
+angular referente a uma pagina web que consome os componentes da biblioteca.
+Para visualizar a pagina de documentação e exemplos dos componentes basta acessar:
+localhost:4200 ou https://felipe660.github.io/frameworkacessivel/
 
-## Code scaffolding
+#Disponivel no NPM
+É possível importar a biblioteca em qualquer projeto angular já startado,
+basta digitar no terminal:
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+npm i framework-acessivel
 
-```bash
-ng generate component component-name
-```
+No caso desse projeto disponibilizei para os avaliadores no formato que a biblioteca foi criada, pois nesse formato é possível ver todo o html, css e ts.
+Porém se necessário basta importar o framework via npm (npm i framework-acessivel) e passar a importar direto do node_modules como uma biblioteca convencional
+ao inves de usar a pasta core como no desenvolvimento.
+Para fazer isso, no app.component.ts altere os imports, exemplo:
+import { ButtonComponent } from "../../../core/src/lib/button/button.component";
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+para 
 
-```bash
-ng generate --help
-```
+import { ButtonComponent} from 'framework-acessivel';
 
-## Building
-
-To build the project run:
-
-```bash
-ng build
-```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+#Como importar e usar componentes
+É possível ver como instalar e importar os componentes em: https://www.npmjs.com/package/framework-acessivel
+Para usar os componentes será necessário verificar a documentação no localhost:4200 ou no https://felipe660.github.io/frameworkacessivel/
