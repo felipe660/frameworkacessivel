@@ -15,7 +15,6 @@
   </nav>
 </header>
 
-
 <section id="home" style="padding: 2rem; max-width: 960px; margin: auto; margin-top: 20px;">
   <h1 style="font-size: 2rem; color: #005fcc;">Framework de Componentes Acessíveis (Angular 15+)</h1>
 
@@ -54,7 +53,6 @@
   </div>
 </section>
 
-
 <section id="button" style="padding: 2rem; max-width: 960px; margin: auto;">
   <h2 style="color: #005fcc; font-size: 1.8rem;">🖱️ Componente de Botão Acessível</h2>
 
@@ -82,6 +80,11 @@
         <td style="padding: 0.5rem;"><code>ariaLabel</code></td>
         <td style="padding: 0.5rem;">string</td>
         <td style="padding: 0.5rem;">Descrição alternativa para leitores de tela</td>
+      </tr>
+      <tr>
+        <td style="padding: 0.5rem;"><code>className</code></td>
+        <td style="padding: 0.5rem;">string</td>
+        <td style="padding: 0.5rem;">Define a estilização do botão</td>
       </tr>
     </tbody>
   </table>
@@ -119,7 +122,7 @@
   </ul>
 </section>
 
-  <section id="button2" style="padding: 2rem; max-width: 960px; margin: auto;">
+<section id="button2" style="padding: 2rem; max-width: 960px; margin: auto;">
   <h1 style="font-size: 2rem; color: #005fcc;">🎨 Personalização de Cor no <code>&lt;accessible-button&gt;</code></h1>
 
   <p>O componente <code>&lt;accessible-button&gt;</code> permite alterar dinamicamente sua cor por meio de <strong>classes personalizadas</strong>. Isso garante flexibilidade visual sem comprometer a acessibilidade.</p>
@@ -164,7 +167,6 @@
   <p style="margin-top: 2rem;"><strong>Com essa abordagem, você garante personalização visual + acessibilidade de verdade! ✅</strong></p>
 </section>
 
-
 <section id="input" style="padding: 2rem; max-width: 960px; margin: auto;">
   <h2 style="color: #005fcc; font-size: 1.8rem;">⌨️ Componente de Input Acessível</h2>
 
@@ -172,14 +174,6 @@
     O componente <code>&lt;accessible-input&gt;</code> é um campo de entrada de texto com suporte completo a acessibilidade: foco visível,
     rótulo interpretável por leitores de tela (<code>aria-label</code>), contraste adequado e mensagens de erro semânticas.
   </p>
-
-  <h3 style="margin-top: 1.5rem; color: #333;">✨ Funcionalidades:</h3>
-  <ul style="line-height: 1.8; font-size: 1rem;">
-    <li>Rótulo associado ao campo mesmo se visualmente oculto</li>
-    <li>Suporte a leitores de tela com <code>aria-label</code></li>
-    <li>Mensagens de erro vinculadas via atributos ARIA</li>
-    <li>Estilização com foco visível e contraste ideal</li>
-  </ul>
 
   <h3 style="margin-top: 1.5rem; color: #333;">🔧 Parâmetros:</h3>
   <table style="width: 100%; border-collapse: collapse; font-size: 0.95rem;">
@@ -195,6 +189,16 @@
         <td style="padding: 0.5rem;"><code>label</code></td>
         <td style="padding: 0.5rem;">string</td>
         <td style="padding: 0.5rem;">Texto descritivo exibido ou lido pelo leitor de tela</td>
+      </tr>
+      <tr>
+        <td style="padding: 0.5rem;"><code>type</code></td>
+        <td style="padding: 0.5rem;">string</td>
+        <td style="padding: 0.5rem;">Tipo do input</td>
+      </tr>
+      <tr>
+        <td style="padding: 0.5rem;"><code>aria-required</code></td>
+        <td style="padding: 0.5rem;">boolean</td>
+        <td style="padding: 0.5rem;">Indica que o campo é obrigatório</td>
       </tr>
       <tr>
         <td style="padding: 0.5rem;"><code>ariaLabel</code></td>
@@ -221,18 +225,16 @@
 
   <h3 style="margin-top: 1.5rem; color: #333;">📦 Exemplo de uso:</h3>
   <pre style="background: #f9f9f9; padding: 1rem; border: 1px solid #ddd; border-radius: 6px; font-size: 0.95rem;">
-    &lt;form (ngSubmit)="send()"&gt;
-      &lt;accessible-input
-        [(modelValue)]="user.name"
-        type ="name"
-        id="nome"
-        label="Nome completo"
-        ariaLabel="Nome completo"
-        placeholder="Digite seu nome"
-        aria-required="true"&gt;
-      &lt;/accessible-input&gt;
-      &lt;span *ngIf="user.name === ''" id="erro" class="erro"&gt;Campo obrigatório&lt;/span&gt;
-    &lt;/form&gt;
+    &lt;accessible-input
+      [(modelValue)]="user.name"
+      type ="name"
+      id="nome"
+      label="Nome completo"
+      ariaLabel="Nome completo"
+      placeholder="Digite seu nome"
+      aria-required="true"&gt;
+    &lt;/accessible-input&gt;
+    &lt;span *ngIf="user.name === ''" id="erro" class="erro"&gt;Campo obrigatório&lt;/span&gt;
   </pre>
 
   <form (ngSubmit)="send()">
@@ -248,20 +250,18 @@
 
     <span *ngIf="user.name === ''" id="erro" class="erro">Campo obrigatório</span>
 
+    <h3 style="margin-top: 1.5rem; color: #333;">🛡️ Acessibilidade garantida:</h3>
+    <ul style="line-height: 1.8; font-size: 1rem;">
+      <li>Compatível com leitores de tela</li>
+      <li>Associação correta entre <code>label</code> e <code>input</code></li>
+      <li>Foco visível e suporte a navegação por teclado</li>
+    </ul>
+
   </form>
 
   <!-- <img src="/imgs/input.png" alt="Exemplo visual de um campo input acessível"
     style="margin-top: 1rem; max-width: 100%; border: 1px solid #ccc; border-radius: 4px;" /> -->
-
-  <h3 style="margin-top: 1.5rem; color: #333;">🛡️ Acessibilidade garantida:</h3>
-  <ul style="line-height: 1.8; font-size: 1rem;">
-    <li>Compatível com leitores de tela</li>
-    <li>Associação correta entre <code>label</code> e <code>input</code></li>
-    <li>Erro com semântica para <code>aria-describedby</code></li>
-    <li>Foco visível e suporte a navegação por teclado</li>
-  </ul>
 </section>
-
 
 <section id="modal" style="padding: 2rem; max-width: 960px; margin: auto;">
   <h2 style="color: #005fcc; font-size: 1.8rem;">🪟 Componente de Modal Acessível</h2>
@@ -270,14 +270,6 @@
     O componente <code>&lt;lib-modal&gt;</code> exibe uma janela modal acessível que respeita as diretrizes de usabilidade
     e acessibilidade: foco preso enquanto estiver aberta, fechamento via <kbd>Esc</kbd> e leitura correta por leitores de tela.
   </p>
-
-  <h3 style="margin-top: 1.5rem; color: #333;">✨ Funcionalidades:</h3>
-  <ul style="line-height: 1.8; font-size: 1rem;">
-    <li>Trava de foco automática enquanto o modal estiver aberto</li>
-    <li>Fechamento acessível via teclado (<kbd>Esc</kbd>)</li>
-    <li>Leitura semântica por tecnologias assistivas</li>
-    <li>Compatível com contraste elevado e temas escuros</li>
-  </ul>
 
   <h3 style="margin-top: 1.5rem; color: #333;">🔧 Parâmetros:</h3>
   <table style="width: 100%; border-collapse: collapse; font-size: 0.95rem;">
@@ -363,6 +355,7 @@
     <li>Fechamento por <kbd>Esc</kbd> compatível com leitores de tela</li>
     <li>Uso de marcação semântica e atributos ARIA</li>
     <li>Leitura correta por NVDA, JAWS e VoiceOver</li>
+    <li>Compatível com contraste elevado e temas escuros</li>
   </ul>
 </section>
 
@@ -373,14 +366,6 @@
     O componente <code>&lt;accessible-table&gt;</code> apresenta dados tabulares de forma acessível,
     utilizando marcação semântica adequada, legenda descritiva e suporte a tecnologias assistivas como leitores de tela.
   </p>
-
-  <h3 style="margin-top: 1.5rem; color: #333;">✨ Funcionalidades:</h3>
-  <ul style="line-height: 1.8; font-size: 1rem;">
-    <li>Legenda descritiva via <code>&lt;caption&gt;</code></li>
-    <li>Uso correto de <code>&lt;thead&gt;</code>, <code>&lt;th&gt;</code> e <code>&lt;tbody&gt;</code></li>
-    <li>Compatível com leitores de tela e navegação por teclado</li>
-    <li>Suporte dinâmico a cabeçalhos e dados</li>
-  </ul>
 
   <h3 style="margin-top: 1.5rem; color: #333;">🔧 Parâmetros:</h3>
   <table style="width: 100%; border-collapse: collapse; font-size: 0.95rem;">
@@ -396,6 +381,11 @@
         <td style="padding: 0.5rem;"><code>caption</code></td>
         <td style="padding: 0.5rem;">string</td>
         <td style="padding: 0.5rem;">Texto descritivo que serve como legenda da tabela</td>
+      </tr>
+      <tr>
+        <td style="padding: 0.5rem;"><code>aria-describedb</code></td>
+        <td style="padding: 0.5rem;">string</td>
+        <td style="padding: 0.5rem;">Descrição adicional quando necessário</td>
       </tr>
       <tr>
         <td style="padding: 0.5rem;"><code>headers</code></td>
@@ -432,11 +422,10 @@
   <ul style="line-height: 1.8; font-size: 1rem;">
     <li>Leitura clara por leitores de tela com marcação de cabeçalhos</li>
     <li>Legenda interpretável via <code>&lt;caption&gt;</code></li>
-    <li>Navegável por teclado em navegadores modernos</li>
+    <li>Navegável por teclado</li>
     <li>Estrutura semântica compatível com padrões de acessibilidade (WCAG)</li>
   </ul>
 </section>
-
 
 <section id="select" style="padding: 2rem; max-width: 960px; margin: auto;">
   <h2 style="color: #005fcc; font-size: 1.8rem;">✅ Componente de Seleção Acessível</h2>
@@ -451,7 +440,6 @@
     <li>Rótulo descritivo com ligação semântica ao campo</li>
     <li>Compatível com navegação por teclado</li>
     <li>Suporte completo a leitores de tela</li>
-    <li>Atualização bidirecional do valor selecionado</li>
   </ul>
 
   <h3 style="margin-top: 1.5rem; color: #333;">🔧 Parâmetros:</h3>
@@ -526,10 +514,10 @@
 
   <h3 style="margin-top: 1.5rem; color: #333;">🛡️ Acessibilidade garantida:</h3>
   <ul style="line-height: 1.8; font-size: 1rem;">
-    <li>Relação clara entre <code>label</code> e <code>select</code> com uso de <code>for</code> e <code>id</code></li>
-    <li>Compatível com leitores de tela como NVDA e VoiceOver</li>
+    <li>Compatível com leitores de tela</li>
     <li>Suporte completo à navegação por teclado</li>
     <li>Foco visível e consistente para acessibilidade visual</li>
+    <li>Atualização bidirecional do valor selecionado</li>
   </ul>
 </section>
 
@@ -540,14 +528,6 @@
     O componente <code>&lt;accessible-alert-list&gt;</code> exibe uma lista dinâmica de mensagens de alerta,
     utilizando ARIA live regions para leitura automática por leitores de tela, garantindo acessibilidade em notificações em tempo real.
   </p>
-
-  <h3 style="margin-top: 1.5rem; color: #333;">✨ Funcionalidades:</h3>
-  <ul style="line-height: 1.8; font-size: 1rem;">
-    <li>Leitura imediata de novos alertas por leitores de tela</li>
-    <li>Remoção de alertas com interação do usuário</li>
-    <li>Suporte a listas dinâmicas com atualizações em tempo real</li>
-    <li>Uso de <code>aria-live="polite"</code> ou <code>assertive</code> conforme a urgência</li>
-  </ul>
 
   <h3 style="margin-top: 1.5rem; color: #333;">🔧 Parâmetros:</h3>
   <table style="width: 100%; border-collapse: collapse; font-size: 0.95rem;">
@@ -585,30 +565,33 @@
 
   <h3 style="margin-top: 1.5rem; color: #333;">📦 Exemplo de uso:</h3>
   <pre style="background: #f9f9f9; padding: 1rem; border: 1px solid #ddd; border-radius: 6px; font-size: 0.95rem;">
-    &lt;form (submit)="addAlert()"&gt;
-      &lt;input
-        type="text"
-        [(ngModel)]="newMsg"
-        name="mensagem"
-        placeholder="Adicione um alerta"
-        aria-label="Nova mensagem"&gt;
-      &lt;button type="submit"&gt;Adicionar&lt;/button&gt;
-    &lt;/form&gt;
 
     &lt;accessible-alert-list
       [messages]="alerts"
       (dismiss)="removeAlert($event)"&gt;
     &lt;/accessible-alert-list&gt;
   </pre>
-  <form (submit)="addAlert()">
-    <input
-      type="text"
-      [(ngModel)]="newMsg"
-      name="mensagem"
-      placeholder="Adicione um alerta"
-      aria-label="Nova mensagem">
-    <button type="submit">Adicionar</button>
-  </form>
+  <div style="width: 50%;">
+    <form (submit)="addAlert()">
+      <accessible-input
+        [(modelValue)]="newMsg"
+        type ="text"
+        id="mensagem"
+        label="Adicionar mensagem"
+        ariaLabel="Adicionar mensagem"
+        placeholder="Digite uma mensagem"
+        aria-required="true">
+      </accessible-input>
+      <p style="margin-top: 5px;"></p>
+      <accessible-button
+        className="btn-azul"
+        label="Enviar"
+        ariaLabel="Botão de Clique"
+        type="submit">
+      </accessible-button>
+    </form>
+  </div>
+  
 
   <accessible-alert-list
     [messages]="alerts"
@@ -618,13 +601,12 @@
 
   <h3 style="margin-top: 1.5rem; color: #333;">🛡️ Acessibilidade garantida:</h3>
   <ul style="line-height: 1.8; font-size: 1rem;">
-    <li>Notificações lidas automaticamente por leitores de tela (NVDA, VoiceOver, etc.)</li>
-    <li>Uso de <code>aria-live</code> para atualizações não intrusivas ou assertivas</li>
+    <li>Leitura imediata de novos alertas por leitores de tela</li>
+    <li>Suporte a listas dinâmicas com atualizações em tempo real</li>
+    <li>Notificações lidas automaticamente por leitores de tela</li>
     <li>Compatível com interação via teclado e dispositivos assistivos</li>
-    <li>Permite remoção de mensagens com retorno imediato</li>
   </ul>
 </section>
-
 
 <section id="collapse" style="padding: 2rem; max-width: 960px; margin: auto;">
 <h2 style="color: #005fcc; font-size: 1.8rem;">📂 Componente Collapse Acessível</h2>
@@ -633,14 +615,6 @@
   O componente <code>&lt;accessible-collapse&gt;</code> permite esconder e revelar conteúdo de forma acessível,
   com suporte completo à navegação por teclado, foco visível e leitura correta por tecnologias assistivas como leitores de tela.
 </p>
-
-<h3 style="margin-top: 1.5rem; color: #333;">✨ Funcionalidades:</h3>
-<ul style="line-height: 1.8; font-size: 1rem;">
-  <li>Expansão e recolhimento com teclas <kbd>Enter</kbd> e <kbd>Espaço</kbd></li>
-  <li>Indicação visual clara de foco e estado</li>
-  <li>Semântica acessível com atributos ARIA</li>
-  <li>Conteúdo oculto permanece acessível ao expandir</li>
-</ul>
 
 <h3 style="margin-top: 1.5rem; color: #333;">🔧 Parâmetros:</h3>
 <table style="width: 100%; border-collapse: collapse; font-size: 0.95rem;">
@@ -673,7 +647,7 @@
 
 <h3 style="margin-top: 1.5rem; color: #333;">🛡️ Acessibilidade garantida:</h3>
 <ul style="line-height: 1.8; font-size: 1rem;">
-  <li>Compatível com leitores de tela (NVDA, VoiceOver, etc.)</li>
+  <li>Compatível com leitores de tela</li>
   <li>Controle completo por teclado</li>
   <li>Uso de <code>aria-expanded</code> e <code>aria-controls</code> para indicar o estado</li>
   <li>Foco visível para acessibilidade de navegação</li>
@@ -687,15 +661,6 @@
   O componente <code>&lt;accessible-dropdown&gt;</code> exibe um menu suspenso acessível, com suporte completo à navegação por teclado,
   foco visível e leitura adequada por tecnologias assistivas utilizando atributos ARIA.
 </p>
-
-<h3 style="margin-top: 1.5rem; color: #333;">✨ Funcionalidades:</h3>
-<ul style="line-height: 1.8; font-size: 1rem;">
-  <li>Navegação por teclado (setas e Enter)</li>
-  <li>Foco visível para melhor usabilidade</li>
-  <li>Suporte a leitores de tela com ARIA roles e states</li>
-  <li>Rótulo acessível e vinculado ao controle</li>
-  <li>Emissão de evento ao selecionar uma opção</li>
-</ul>
 
 <h3 style="margin-top: 1.5rem; color: #333;">🔧 Parâmetros:</h3>
 <table style="width: 100%; border-collapse: collapse; font-size: 0.95rem;">
@@ -755,12 +720,14 @@
 
 <h3 style="margin-top: 1.5rem; color: #333;">🛡️ Acessibilidade garantida:</h3>
 <ul style="line-height: 1.8; font-size: 1rem;">
-  <li>Compatível com leitores de tela (NVDA, VoiceOver, etc.)</li>
+  <li>Compatível com leitores de tela</li>
   <li>Uso de <code>aria-expanded</code>, <code>aria-activedescendant</code> e <code>role="listbox"</code></li>
   <li>Foco visível e coerente com o fluxo de navegação</li>
   <li>Totalmente operável por teclado</li>
+  <li>Emissão de evento ao selecionar uma opção</li>
 </ul>
 </section>
+
 <section id="images" style="padding: 2rem; max-width: 960px; margin: auto;">
   <h2 style="color: #005fcc; font-size: 1.8rem;">🖼️ Componente de Imagem Acessível</h2>
 
@@ -768,15 +735,6 @@
     O componente <code>&lt;lib-accessible-image&gt;</code> exibe uma imagem de forma responsiva e acessível,
     garantindo compatibilidade com leitores de tela, boa usabilidade em dispositivos móveis e performance otimizada com carregamento preguiçoso (<code>lazy loading</code>).
   </p>
-
-  <h3 style="margin-top: 1.5rem; color: #333;">✨ Funcionalidades:</h3>
-  <ul style="line-height: 1.8; font-size: 1rem;">
-    <li>Responsividade com ajuste automático de largura</li>
-    <li>Texto alternativo obrigatório para leitores de tela (<code>alt</code>)</li>
-    <li>Legenda opcional visível com <code>showCaption</code></li>
-    <li>Suporte a cantos arredondados com <code>rounded</code></li>
-    <li>Lazy loading nativo</li>
-  </ul>
 
   <h3 style="margin-top: 1.5rem; color: #333;">🔧 Parâmetros:</h3>
   <table style="width: 100%; border-collapse: collapse; font-size: 0.95rem;">
@@ -835,13 +793,13 @@
 
   <h3 style="margin-top: 1.5rem; color: #333;">🛡️ Acessibilidade garantida:</h3>
   <ul style="line-height: 1.8; font-size: 1rem;">
-    <li>Leitura correta por NVDA, VoiceOver e leitores de tela</li>
-    <li>Semântica com <code>&lt;figure&gt;</code> e <code>&lt;figcaption&gt;</code></li>
+    <li>Leitura correta por leitores de tela</li>
     <li>Carregamento otimizado com <code>loading="lazy"</code></li>
     <li>Responsividade garantida para diferentes tamanhos de tela</li>
   </ul>
-  </section>
-  <section id="install" style="padding: 2rem; max-width: 960px; margin: auto;">
+</section>
+
+<section id="install" style="padding: 2rem; max-width: 960px; margin: auto;">
   <h2 style="color: #005fcc; font-size: 1.8rem;">⚙️ Instalação e Uso da Biblioteca</h2>
 
   <h3 style="margin-top: 1.5rem; color: #333;">📥 1. Como instalar</h3>
