@@ -224,30 +224,30 @@
     &lt;form (ngSubmit)="send()"&gt;
       &lt;accessible-input
         [(modelValue)]="user.name"
+        type ="name"
         id="nome"
         label="Nome completo"
         ariaLabel="Nome completo"
-        placeholder="Digite seu nome"&gt;
+        placeholder="Digite seu nome"
+        aria-required="true"&gt;
       &lt;/accessible-input&gt;
-
-      &lt;div *ngIf="user.name === ''" style="margin-top: 10px;"&gt;
-        &lt;span class="erro"&gt;Este campo é obrigatório&lt;/span&gt;
-      &lt;/div&gt;
+      &lt;span *ngIf="user.name === ''" id="erro" class="erro"&gt;Campo obrigatório&lt;/span&gt;
     &lt;/form&gt;
   </pre>
 
   <form (ngSubmit)="send()">
     <accessible-input
       [(modelValue)]="user.name"
+      type ="name"
       id="nome"
       label="Nome completo"
       ariaLabel="Nome completo"
-      placeholder="Digite seu nome">
+      placeholder="Digite seu nome"
+      aria-required="true">
     </accessible-input>
 
-    <div *ngIf="user.name === ''" style="margin-top: 10px;">
-      <span class="erro">Este campo é obrigatório</span>
-    </div>
+    <span *ngIf="user.name === ''" id="erro" class="erro">Campo obrigatório</span>
+
   </form>
 
   <!-- <img src="/imgs/input.png" alt="Exemplo visual de um campo input acessível"
@@ -511,8 +511,6 @@
       [options]="statusOptions"
       [(selected)]="selectStatus"&gt;
     &lt;/accessible-select&gt;
-
-    &lt;p&gt;Status selecionado: {{ selectStatus }}&lt;/p&gt;
   </pre>
   <accessible-select 
     [label]="'Status do usuário'"

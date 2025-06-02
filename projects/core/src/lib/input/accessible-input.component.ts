@@ -12,8 +12,7 @@ export class AccessibleInputComponent {
   @Input() ariaLabel: string = '';
   @Input() placeholder: string = '';
   @Input() id: string = 'input-id';
-
-  // Aqui acontece o binding bidirecional
+  @Input() invalid: boolean = false;
   @Input() modelValue: string = '';
   @Output() modelValueChange = new EventEmitter<string>();
 

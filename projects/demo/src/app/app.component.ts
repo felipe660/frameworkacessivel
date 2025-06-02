@@ -14,7 +14,7 @@ import { ResponsiveImageComponent } from '../../../core/src/lib/responsive-image
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, ButtonComponent, ResponsiveImageComponent, AccessibleInputComponent, CommonModule, ModalComponent, TableComponent, SelectComponent, AlertListComponent, FormsModule, CollapseComponent, DropdownComponent],
+  imports: [ButtonComponent, ResponsiveImageComponent, AccessibleInputComponent, CommonModule, ModalComponent, TableComponent, SelectComponent, AlertListComponent, FormsModule, CollapseComponent, DropdownComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
