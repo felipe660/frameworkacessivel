@@ -1,6 +1,6 @@
 #Como baixar o projeto:
 
-https://github.com/felipe660/frameworkacessivel
+git clone https://github.com/felipe660/frameworkacessivel.git
 ou simplesmente baixe diretamente pelo drive:
 drive.com.br
 
@@ -11,10 +11,7 @@ que se trata da pagina referente a exemplos e documentação de uso da bibliotec
 
 #Como startar o projeto
 
-Ao extrair o arquivo principal pode criar duas pastas frameworkacessivel-main, certifique-se de estar na correta
-que é a que contem a pasta projects.
-
-Na pasta frameworkacessivel-main abra o terminal e digite:
+Na pasta /frameworkacessivel abra o terminal e digite:
 Npm install
 
 Em seguida starte o server:
