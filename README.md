@@ -1,8 +1,6 @@
 #Como baixar o projeto:
 
 git clone https://github.com/felipe660/frameworkacessivel.git
-ou simplesmente baixe diretamente pelo drive:
-drive.com.br
 
 #Conteúdo dos arquivos
 
@@ -42,4 +40,4 @@ import { ButtonComponent} from 'framework-acessivel';
 
 #Como importar e usar componentes
 É possível ver como instalar e importar os componentes em: https://www.npmjs.com/package/framework-acessivel
-Para usar os componentes no html será necessário verificar a documentação no localhost:4200 ou no https://felipe660.github.io/frameworkacessivel/
+Para usar novos componentes no html será necessário verificar a documentação no localhost:4200 ou no https://felipe660.github.io/frameworkacessivel/
