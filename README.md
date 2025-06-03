@@ -1,7 +1,7 @@
 #Requisitos
 
+-Node.js
 -Angular 19+
--NPM
 
 #Como baixar o projeto:
 
@@ -37,7 +37,7 @@ npm i framework-acessivel
 No caso desse projeto disponibilizei para os avaliadores no formato que a biblioteca foi criada, pois nesse formato é possível ver todo o html, css e ts.
 Porém se necessário basta importar o framework via npm (npm i framework-acessivel) como dito anteriormente e passar a importar direto do node_modules 
 como uma biblioteca convencional ao inves de usar a pasta core como no desenvolvimento.
-Para fazer isso, em demo/src/app altere os imports no arquivo app.component.ts, 
+Para fazer isso, em projects/demo/src/app altere os imports no arquivo app.component.ts, 
 exemplo:
 
 import { ButtonComponent } from "../../../core/src/lib/button/button.component";
