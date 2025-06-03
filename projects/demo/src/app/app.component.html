@@ -44,11 +44,11 @@
       <li><strong>&lt;accessible-input&gt;</strong> – Campo de entrada com rótulo visível para leitores de tela e validação com ARIA.</li>
       <li><strong>&lt;lib-modal&gt;</strong> – Modal com foco preso, leitura assistiva e fechamento via tecla Esc.</li>
       <li><strong>&lt;accessible-table&gt;</strong> – Tabela semântica com cabeçalhos, legenda e leitura por leitores de tela.</li>
-      <li><strong>&lt;accessible-select&gt;</strong> – Seleção personalizada com suporte a teclado, screen readers e rótulo descritivo.</li>
-      <li><strong>&lt;accessible-alert-list&gt;</strong> – Lista de alertas com região ARIA live e remoção interativa.</li>
+      <li><strong>&lt;accessible-select&gt;</strong> – Seleção personalizada com suporte a teclado, leitores de tela e rótulo descritivo.</li>
+      <li><strong>&lt;accessible-alert-list&gt;</strong> – Lista de alertas com região ARIA live e leitura instantanea ao notificar por leitores de tela.</li>
       <li><strong>&lt;accessible-collapse&gt;</strong> – Painel colapsável acessível com expansão via teclado.</li>
       <li><strong>&lt;accessible-dropdown&gt;</strong> – Menu dropdown acessível com foco gerenciado e leitura por tecnologias assistivas.</li>
-      <li><strong>&lt;lib-responsive-image&gt;</strong> – Imagem responsiva com alt  e aria-describedby para contexto adicional.</li>
+      <li><strong>&lt;lib-responsive-image&gt;</strong> – Imagem responsiva com alt e aria-describedby para contexto adicional.</li>
     </ul>
   </div>
 </section>
@@ -316,6 +316,7 @@
   </table>
 
   <h3 style="margin-top: 1.5rem; color: #333;">📦 Exemplo de uso:</h3>
+  <p>Html</p>
   <pre style="background: #f9f9f9; padding: 1rem; border: 1px solid #ddd; border-radius: 6px; font-size: 0.95rem;">
     &lt;accessible-button
       label="Abrir Modal"
@@ -330,6 +331,15 @@
       (fechado)="closeModal()"&gt;
       &lt;p&gt;Conteúdo do modal.&lt;/p&gt;
     &lt;/lib-modal&gt;
+  </pre>
+  <p>Typescrypt</p>
+  <pre style="background: #f9f9f9; padding: 1rem; border: 1px solid #ddd; border-radius: 6px; font-size: 0.95rem;">
+    openModal() {{'{'}}
+      this.modalOpen = true;
+    {{'}'}}
+    closeModal() {{ '{' }}
+      this.modalOpen = false;
+    {{ '}' }}
   </pre>
 
   <accessible-button
@@ -396,12 +406,22 @@
   </table>
 
   <h3 style="margin-top: 1.5rem; color: #333;">📦 Exemplo de uso:</h3>
+  <p>Html</p>
   <pre style="background: #f9f9f9; padding: 1rem; border: 1px solid #ddd; border-radius: 6px; font-size: 0.95rem;">
     &lt;accessible-table
       [caption]="'Lista de Usuários'"
       [headers]="headers"
       [data]="tableData"&gt;
     &lt;/accessible-table&gt;
+  </pre>
+  <p>Typescript</p>
+  <pre style="background: #f9f9f9; padding: 1rem; border: 1px solid #ddd; border-radius: 6px; font-size: 0.95rem;">
+    headers = ['Nome', 'Email', 'Status'];
+    tableData = [
+      ['João Silva', 'joao&#64;email.com', 'Ativo'],
+      ['Maria Souza', 'maria&#64;email.com', 'Inativo'],
+      ['Carlos Lima', 'carlos&#64;email.com', 'Ativo']
+    ];
   </pre>
   <accessible-table
     [caption]="'Lista de Usuários'"
@@ -486,6 +506,7 @@
   </table>
 
   <h3 style="margin-top: 1.5rem; color: #333;">📦 Exemplo de uso:</h3>
+  <p>Html</p>
   <pre style="background: #f9f9f9; padding: 1rem; border: 1px solid #ddd; border-radius: 6px; font-size: 0.95rem;">
     &lt;accessible-select 
       [label]="'Status do usuário'"
@@ -493,6 +514,14 @@
       [options]="statusOptions"
       [(selected)]="selectStatus"&gt;
     &lt;/accessible-select&gt;
+  </pre>
+  <p>Typescript</p>
+  <pre style="background: #f9f9f9; padding: 1rem; border: 1px solid #ddd; border-radius: 6px; font-size: 0.95rem;">
+    statusOptions = [
+      {{ '{' }} label: 'Ativo', value: 'Ativo' {{ '}' }},
+      {{ '{' }} label: 'Inativo', value: 'Inativo' {{ '}' }},
+      {{ '{' }} label: 'Pendente', value: 'Pendente' {{ '}' }}
+    ];
   </pre>
   <accessible-select 
     [label]="'Status do usuário'"
@@ -558,6 +587,7 @@
   </table>
 
   <h3 style="margin-top: 1.5rem; color: #333;">📦 Exemplo de uso:</h3>
+  <p>Html</p>
   <pre style="background: #f9f9f9; padding: 1rem; border: 1px solid #ddd; border-radius: 6px; font-size: 0.95rem;">
 
     &lt;accessible-alert-list
@@ -565,6 +595,13 @@
       (dismiss)="removeAlert($event)"&gt;
     &lt;/accessible-alert-list&gt;
   </pre>
+  <p>Typescript</p>
+  <pre style="background: #f9f9f9; padding: 1rem; border: 1px solid #ddd; border-radius: 6px; font-size: 0.95rem;">
+    alerts = [
+      {{ '{' }} id: 1, text: 'Bem-vindo!', ativo: true {{ '}' }}
+    ];
+  </pre>
+
   <div style="width: 50%;">
     <form (submit)="addAlert()">
       <accessible-input
@@ -698,12 +735,17 @@
 </table>
 
 <h3 style="margin-top: 1.5rem; color: #333;">📦 Exemplo de uso:</h3>
+<p>Html</p>
 <pre style="background: #f9f9f9; padding: 1rem; border: 1px solid #ddd; border-radius: 6px; font-size: 0.95rem;">
   &lt;accessible-dropdown
     [label]="'Options'"
     [options]="menuOptions"
     (selected)="selectOption($event)"&gt;
   &lt;/accessible-dropdown&gt;
+</pre>
+<p>Typescript</p>
+<pre style="background: #f9f9f9; padding: 1rem; border: 1px solid #ddd; border-radius: 6px; font-size: 0.95rem;">
+  menuOptions = [&#39;Perfil&#39;, &#39;Configurações&#39;, &#39;Sair&#39;];
 </pre>
 <accessible-dropdown
   [label]="'Options'"

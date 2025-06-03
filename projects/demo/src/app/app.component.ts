@@ -73,9 +73,7 @@ export class AppComponent {
   }
 
   openModal() {
-    console.log('Modal aberto!');
-    console.log(this.modalOpen);
-    this.modalOpen  = true;
+    this.modalOpen = true;
   }
 
   closeModal() {
