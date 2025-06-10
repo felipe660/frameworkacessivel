@@ -103,16 +103,16 @@
       (onClick)="handleButtonClick()"&gt;
     &lt;/accessible-button&gt;
   </pre>
-
-  <accessible-button
-      className="btn-azul"
-      label="Clique Aqui"
-      ariaLabel="Botão de Clique"
-      (onClick)="handleButtonClick()">
-  </accessible-button>
-  <!-- <img src="imgs/button.png" alt="Exemplo visual do botão acessível"
-    style="margin-top: 1rem; max-width: 100%; border: 1px solid #ccc; border-radius: 4px;" /> -->
-
+  <div style="width: 30%;">
+    <accessible-button
+          className="btn-azul"
+          label="Clique Aqui"
+          ariaLabel="Botão de Clique"
+          (onClick)="handleButtonClick()">
+      </accessible-button>
+      <!-- <img src="imgs/button.png" alt="Exemplo visual do botão acessível"
+        style="margin-top: 1rem; max-width: 100%; border: 1px solid #ccc; border-radius: 4px;" /> -->
+  </div>
   <h3 style="margin-top: 1.5rem; color: #333;">🛡️ Acessibilidade garantida:</h3>
   <ul style="line-height: 1.8; font-size: 1rem;">
     <li>Navegação total via teclado (tab, enter, espaço)</li>
@@ -342,11 +342,14 @@
     {{ '}' }}
   </pre>
 
-  <accessible-button
-    label="Abrir Modal"
-    ariaLabel="Botão para abrir Modal"
-    (onClick)="openModal()">
-  </accessible-button>
+  <div style="width: 30%;">
+    <accessible-button
+      label="Abrir Modal"
+      ariaLabel="Botão para abrir Modal"
+      (onClick)="openModal()">
+    </accessible-button>
+  </div>
+  
 
   <lib-modal
     [aberto]="modalOpen"
@@ -583,7 +586,6 @@
   <pre style="background: #f9f9f9; padding: 1rem; border: 1px solid #ddd; border-radius: 6px; font-size: 0.95rem;">
 
     &lt;accessible-alert-list
-      className="alertBlue"
       [messages]="alerts"
       (dismiss)="removeAlert($event)"&gt;
     &lt;/accessible-alert-list&gt;
@@ -595,7 +597,7 @@
     ];
   </pre>
 
-  <div style="width: 50%;">
+  <div style="width: 30%;">
     <form (submit)="addAlert()">
       <accessible-input
         [(modelValue)]="newMsg"

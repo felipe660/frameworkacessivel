@@ -22,7 +22,6 @@
   min-width: 250px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
-
 .alertRed {
   display: flex;
   justify-content: space-between;
@@ -30,7 +29,7 @@
   background-color: red;
   color: white;
   padding: 1rem;
-  border: 1px solid #b3d7ff;
+  border: 1px solid white;
   border-radius: 8px;
   font-size: 1rem;
   min-width: 250px;
@@ -42,7 +41,7 @@
   border: none;
   font-size: 1.2rem;
   font-weight: bold;
-  color: #003366;
+  color: white;
   cursor: pointer;
   margin-left: 1rem;
 }

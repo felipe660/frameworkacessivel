@@ -4,10 +4,11 @@ import { ButtonComponent } from "../../../core/src/lib/button/button.component";
 import { TableComponent } from "../../../core/src/lib/table/table.component";
 import { SelectComponent } from "../../../core/src/lib/select/select.component";
 import { AlertListComponent } from "../../../core/src/lib/alert-list/alert-list.component";
+import { WarningAlertListComponent } from "../../../core/src/lib/warning-alert-list/warning-alert-list.component";
 
 @Component({
   selector: 'app-login',
-  imports: [ButtonComponent, AccessibleInputComponent, TableComponent, SelectComponent, AlertListComponent],
+  imports: [ButtonComponent, AccessibleInputComponent, TableComponent, SelectComponent, AlertListComponent, WarningAlertListComponent],
   templateUrl: './login.component.html',
   styleUrl: './login.component.scss'
 })
@@ -41,14 +42,21 @@ export class LoginComponent {
     console.log(this.tableData);
     }
     else{
-      const novoAlerta = {id:this.alerts.length + 1, text:'Preencha todos os campos', ativo: true}
+      const novoAlerta = {id:this.alertsRed.length + 1, text:'Preencha todos os campos', ativo: true}
       console.log(novoAlerta)
-      this.alerts.push(novoAlerta);
+      this.alertsRed.push(novoAlerta);
     }
   }
 
   removeAlert(id: number) {
     const alerta = this.alerts.find(msg => msg.id === id);
+    if (alerta) {
+      alerta.ativo = false;
+    }
+  }
+
+  removeAlertRed(id: number) {
+    const alerta = this.alertsRed.find(msg => msg.id === id);
     if (alerta) {
       alerta.ativo = false;
     }
