@@ -13,3 +13,4 @@ export * from './lib/modal/modal.component';
 export * from './lib/responsive-image/responsive-image.component';
 export * from './lib/select/select.component';
 export * from './lib/table/table.component';
+export * from './lib/warning-alert-list/warning-alert-list.component';

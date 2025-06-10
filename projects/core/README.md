@@ -1,63 +1,96 @@
-# Core
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.2.0.
+# framework-acessivel
 
-## Code scaffolding
+**Framework Acessível para Desenvolvimento de Aplicações Web com Angular**  
+Conjunto de componentes reutilizáveis que seguem as diretrizes de acessibilidade **WCAG 2.2**, facilitando a criação de interfaces inclusivas e acessíveis.
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+---
 
-```bash
-ng generate component component-name
-```
+## ✨ Funcionalidades
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+- ✅ Componentes com suporte a teclado e leitores de tela
+- ✅ Padrões de design acessível
+- ✅ Compatível com Angular 19+
+- ✅ Fácil de integrar e estender
+- ✅ Documentação clara e exemplos práticos
 
-```bash
-ng generate --help
-```
+---
 
-## Building
-
-To build the library, run:
+## 🚀 Instalação
 
 ```bash
-ng build core
+npm install framework-acessivel
 ```
 
-This command will compile your project, and the build artifacts will be placed in the `dist/` directory.
+---
 
-### Publishing the Library
+## 🛠️ Como usar
 
-Once the project is built, you can publish your library by following these steps:
+Importe o componente desejado no seu `AppComponent` ou no módulo desejado:
 
-1. Navigate to the `dist` directory:
-   ```bash
-   cd dist/core
-   ```
+```typescript
+import { ButtonComponent } from 'framework-acessivel';
 
-2. Run the `npm publish` command to publish your library to the npm registry:
-   ```bash
-   npm publish
-   ```
-
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
-
-```bash
-ng test
+@NgModule({
+  imports: [
+    ButtonComponent
+  ],
+})
+export class AppComponent { }
 ```
 
-## Running end-to-end tests
+Utilize os componentes diretamente no seu HTML:
 
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
+```html
+<accessible-button
+    className="btn-azul"
+    label="Clique Aqui"
+    ariaLabel="Botão de Clique"
+    (onClick)="handleButtonClick()">
+</accessible-button>
 ```
+---
 
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
+## 📚 Documentação
 
-## Additional Resources
+[https://felipe660.github.io/frameworkacessivel/](https://felipe660.github.io/frameworkacessivel/)
 
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+---
+
+## 💡 Motivação
+
+Este framework nasceu da necessidade de simplificar o desenvolvimento de aplicações acessíveis, democratizando o acesso a componentes que seguem as boas práticas definidas pelas diretrizes WCAG e normas de Acessibilidade Web.
+
+---
+
+## ✅ Requisitos
+
+- Angular ^19.0.0
+- TypeScript >=5.0
+
+---
+
+## 🤝 Contribuindo
+
+Contribuições são muito bem-vindas!
+
+1. Crie sua feature branch:  
+   `git checkout -b feature/nova-feature`
+2. Commit suas alterações:  
+   `git commit -m 'feat: adicionado novo componente'`
+3. Push:  
+   `git push origin feature/nova-feature`
+4. Abra um Pull Request
+
+---
+
+## 🖥️ Desenvolvido por
+
+**Felipe Milani**  
+Desenvolvimento de frameworks web.
+
+---
+
+## 📫 Contato
+
+- Email: felipe.s.milani@gmail.com
