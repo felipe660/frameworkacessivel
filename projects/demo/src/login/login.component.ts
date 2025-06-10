@@ -27,17 +27,23 @@ export class LoginComponent {
   ];
 
   alerts: { id: number; text: string; ativo: boolean }[] = [];
+  alertsRed: { id: number; text: string; ativo: boolean }[] = [];
 
   tableData: string[][] = [];
 
   handleButtonClick() {
     console.log(this.user)
-    if(this.user.name != '' || this.user.email != '' || this.user.phone != ''){
+    if(this.user.name != '' && this.user.email != '' && this.user.phone != ''){
     const novoItem: string[] = [this.user.name, this.user.email, this.user.phone, this.selectStatus];
     const novoAlerta = {id:this.alerts.length + 1, text:'Novo usuario adicionado', ativo: true}
     this.alerts.push(novoAlerta);
     this.tableData.push(novoItem);
     console.log(this.tableData);
+    }
+    else{
+      const novoAlerta = {id:this.alerts.length + 1, text:'Preencha todos os campos', ativo: true}
+      console.log(novoAlerta)
+      this.alerts.push(novoAlerta);
     }
   }
 

@@ -2,7 +2,7 @@
 <div class="alert-wrapper">
   <div
     *ngFor="let msg of mensagensAtivas"
-    class="alert"
+    [className]="className"
     role="alert"
     aria-live="polite"
   >

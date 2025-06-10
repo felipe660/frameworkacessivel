@@ -10,6 +10,7 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
 })
 export class AlertListComponent {
   @Input() messages: { id: number; text: string; ativo: boolean }[] = [];
+  @Input() className: string = '';
   @Output() dismiss = new EventEmitter<number>();
 
   // Getter que retorna apenas os alertas ativos

@@ -9,12 +9,25 @@
   gap: 1rem;
 }
 
-.alert {
+.alertBlue {
   display: flex;
   justify-content: space-between;
   align-items: center;
   background-color: #eaf4ff;
   color: #003366;
+  padding: 1rem;
+  border: 1px solid #b3d7ff;
+  border-radius: 8px;
+  font-size: 1rem;
+  min-width: 250px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+.alertRed {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: red;
+  color: white;
   padding: 1rem;
   border: 1px solid #b3d7ff;
   border-radius: 8px;

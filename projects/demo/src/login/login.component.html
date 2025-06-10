@@ -58,6 +58,13 @@
   </div>
 
   <accessible-alert-list
+    className="alertBlue"
     [messages]="alerts"
+    (dismiss)="removeAlert($event)">
+  </accessible-alert-list>
+
+  <accessible-alert-list
+    className="alertRed"
+    [messages]="alertsRed"
     (dismiss)="removeAlert($event)">
   </accessible-alert-list>
