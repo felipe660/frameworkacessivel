@@ -1,60 +1,63 @@
- <!-- <accessible-dropdown
-    [label]="'Options'"
-    [options]="menuOptions"
-    (selected)="selectOption($event)">
-</accessible-dropdown>
-<accessible-button
-    className="btn-verde"
-    label="Clique Aqui"
-    ariaLabel="Botão de Clique"
-    (onClick)="handleButtonClick()">
-</accessible-button> -->
+<div class="login-container">
+  <h1 class="login-title">Login</h1>
+  
+  <form class="login-form" (ngSubmit)="handleButtonClick()">
+    <accessible-input
+      [(modelValue)]="user.name"
+      type="text"
+      id="nome"
+      label="Nome completo"
+      ariaLabel="Nome completo"
+      placeholder="Digite seu nome"
+      aria-required="true">
+    </accessible-input>
 
-<accessible-input
-    [(modelValue)]="user.name"
-    type ="name"
-    id="nome"
-    label="Nome completo"
-    ariaLabel="Nome completo"
-    placeholder="Digite seu nome"
-    aria-required="true">
-</accessible-input>
-<accessible-input
-    [(modelValue)]="user.email"
-    type ="email"
-    id="email"
-    label="Email"
-    ariaLabel="Email"
-    placeholder="Digite o seu email"
-    aria-required="true">
-</accessible-input>
-<accessible-input
-    [(modelValue)]="user.phone"
-    type ="phone"
-    id="telefone"
-    label="Telefone"
-    ariaLabel="Telefone"
-    placeholder="Digite o seu telefone"
-    aria-required="true">
-</accessible-input>
- <accessible-select 
-    [label]="'Status do usuário'"
-    [id]="'status-select'"
-    [options]="statusOptions"
-    [(selected)]="selectStatus">
-</accessible-select>
-<accessible-button
-    className="btn-verde"
-    label="Clique Aqui"
-    ariaLabel="Botão de Clique"
-    (onClick)="handleButtonClick()">
-</accessible-button>
- <accessible-table
-    [caption]="'Lista de Usuários'"
-    [headers]="headersData"
-    [data]="tableData">
-</accessible-table>
-<accessible-alert-list
+    <accessible-input
+      [(modelValue)]="user.email"
+      type="email"
+      id="email"
+      label="Email"
+      ariaLabel="Email"
+      placeholder="Digite o seu email"
+      aria-required="true">
+    </accessible-input>
+
+    <accessible-input
+      [(modelValue)]="user.phone"
+      type="tel"
+      id="telefone"
+      label="Telefone"
+      ariaLabel="Telefone"
+      placeholder="Digite o seu telefone"
+      aria-required="true">
+    </accessible-input>
+
+    <accessible-select 
+      [label]="'Status do usuário'"
+      [id]="'status-select'"
+      [options]="statusOptions"
+      [(selected)]="selectStatus">
+    </accessible-select>
+
+    <accessible-button
+      className="btn-verde"
+      label="Entrar"
+      ariaLabel="Botão de Clique"
+      (onClick)="handleButtonClick()">
+    </accessible-button>
+  </form>
+
+</div>
+
+  <div class="table-wrapper">
+    <accessible-table
+      [caption]="'Lista de Usuários'"
+      [headers]="headersData"
+      [data]="tableData">
+    </accessible-table>
+  </div>
+
+  <accessible-alert-list
     [messages]="alerts"
     (dismiss)="removeAlert($event)">
-</accessible-alert-list>
+  </accessible-alert-list>

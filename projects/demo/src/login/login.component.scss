@@ -1,0 +1,70 @@
+/* Estrutura principal */
+.login-container {
+  max-width: 480px;
+  margin: 4rem auto;
+  padding: 2rem;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.08);
+}
+
+.login-title {
+  font-size: 1.8rem;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 2rem;
+  color: #333;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+/* Botão verde reutilizável */
+.btn-verde {
+  background-color: #2e7d32;
+  color: white;
+  padding: 0.8rem 1.2rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 500;
+  transition: background-color 0.3s;
+}
+
+.btn-verde:hover {
+  background-color: #1b5e20;
+}
+
+/* Tabela responsiva */
+.table-wrapper {
+  margin-top: 2rem;
+  overflow-x: auto;
+}
+
+accessible-table {
+  width: 100%;
+}
+
+/* Alerta */
+accessible-alert-list {
+  margin-top: 1.5rem;
+}
+
+/* Responsivo */
+@media (max-width: 600px) {
+  .login-container {
+    padding: 1.5rem;
+  }
+
+  .login-title {
+    font-size: 1.5rem;
+  }
+
+  .btn-verde {
+    font-size: 0.95rem;
+  }
+}
