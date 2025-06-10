@@ -1,0 +1,60 @@
+ <!-- <accessible-dropdown
+    [label]="'Options'"
+    [options]="menuOptions"
+    (selected)="selectOption($event)">
+</accessible-dropdown>
+<accessible-button
+    className="btn-verde"
+    label="Clique Aqui"
+    ariaLabel="Botão de Clique"
+    (onClick)="handleButtonClick()">
+</accessible-button> -->
+
+<accessible-input
+    [(modelValue)]="user.name"
+    type ="name"
+    id="nome"
+    label="Nome completo"
+    ariaLabel="Nome completo"
+    placeholder="Digite seu nome"
+    aria-required="true">
+</accessible-input>
+<accessible-input
+    [(modelValue)]="user.email"
+    type ="email"
+    id="email"
+    label="Email"
+    ariaLabel="Email"
+    placeholder="Digite o seu email"
+    aria-required="true">
+</accessible-input>
+<accessible-input
+    [(modelValue)]="user.phone"
+    type ="phone"
+    id="telefone"
+    label="Telefone"
+    ariaLabel="Telefone"
+    placeholder="Digite o seu telefone"
+    aria-required="true">
+</accessible-input>
+ <accessible-select 
+    [label]="'Status do usuário'"
+    [id]="'status-select'"
+    [options]="statusOptions"
+    [(selected)]="selectStatus">
+</accessible-select>
+<accessible-button
+    className="btn-verde"
+    label="Clique Aqui"
+    ariaLabel="Botão de Clique"
+    (onClick)="handleButtonClick()">
+</accessible-button>
+ <accessible-table
+    [caption]="'Lista de Usuários'"
+    [headers]="headersData"
+    [data]="tableData">
+</accessible-table>
+<accessible-alert-list
+    [messages]="alerts"
+    (dismiss)="removeAlert($event)">
+</accessible-alert-list>
