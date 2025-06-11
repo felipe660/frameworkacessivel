@@ -18,13 +18,13 @@ export class LoginComponent {
   @Input() className: string = ''; 
   headersData = ['Nome', 'Email', 'Phone', 'Status'];
   title = 'teste-framework';
-  selectStatus = 'ativo';
+  selectStatus = '';
   menuOptions = ['Perfil', 'Configurações', 'Sair'];
   user: any = { name: '', email: '', phone: '' };
   statusOptions = [
-  { label: 'Ativo', value: 'ativo' },
-  { label: 'Inativo', value: 'inativo' },
-  { label: 'Pendente', value: 'pendente' }
+  { label: 'Ativo', value: 'Ativo' },
+  { label: 'Inativo', value: 'Inativo' },
+  { label: 'Pendente', value: 'Pendente' }
   ];
 
   alerts: { id: number; text: string; ativo: boolean }[] = [];
@@ -34,7 +34,7 @@ export class LoginComponent {
 
   handleButtonClick() {
     console.log(this.user)
-    if(this.user.name != '' && this.user.email != '' && this.user.phone != ''){
+    if(this.user.name != '' && this.user.email != '' && this.user.phone != '' && this.selectStatus != ''){
     const novoItem: string[] = [this.user.name, this.user.email, this.user.phone, this.selectStatus];
     const novoAlerta = {id:this.alerts.length + 1, text:'Novo usuario adicionado', ativo: true}
     this.alerts.push(novoAlerta);
