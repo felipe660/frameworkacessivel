@@ -6,7 +6,7 @@
 #Como baixar o projeto:
 
 Usar o repositorio publicado no ava ou baixar pelo git:
-git clone https://github.com/felipe660/frameworkacessivel.git
+git clone https://github.com/milanitech/frameworkacessivel.git
 
 #Conteúdo dos arquivos
 
@@ -25,7 +25,7 @@ Isso vai subir a pagina web referente a pasta demo que está utilizando a biblio
 Essa foi a maneira encontrada para teste e também documentação, visto que nao tem como rodar a biblioteca isoladamente sem um projeto 
 angular referente a uma pagina web que consome os componentes da biblioteca.
 Para visualizar a pagina de documentação e exemplos dos componentes basta acessar:
-localhost:4200 ou https://felipe660.github.io/frameworkacessivel/
+localhost:4200 ou https://milanitech.github.io/frameworkacessivel/
 
 #Disponivel no NPM
 
@@ -64,4 +64,4 @@ a partir de então você passará a consumir os componentes diretamente da blibl
 
 #Como importar e usar componentes
 É possível ver como instalar e importar os componentes em: https://www.npmjs.com/package/framework-acessivel
-Para usar novos componentes no html será necessário verificar a documentação no localhost:4200 ou no https://felipe660.github.io/frameworkacessivel/
+Para usar novos componentes no html será necessário verificar a documentação no localhost:4200 ou no https://milanitech.github.io/frameworkacessivel/

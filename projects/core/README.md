@@ -53,7 +53,7 @@ Utilize os componentes diretamente no seu HTML:
 
 ## 📚 Documentação
 
-[https://felipe660.github.io/frameworkacessivel/](https://felipe660.github.io/frameworkacessivel/)
+[https://milanitech.github.io/frameworkacessivel/](https://milanitech.github.io/frameworkacessivel/)
 
 ---
 
