@@ -1,4 +1,4 @@
 User-agent: *
 Disallow:
 
-Sitemap: https://felipe660.github.io/frameworkacessivel/sitemap.xml
+Sitemap: https://milanitech.github.io/frameworkacessivel/sitemap.xml
