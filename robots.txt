@@ -1,0 +1,4 @@
+User-agent: *
+Disallow:
+
+Sitemap: https://felipe660.github.io/frameworkacessivel/sitemap.xml
