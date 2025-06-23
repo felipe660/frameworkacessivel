@@ -62,7 +62,8 @@
             "assets": [
               {
                 "glob": "**/*",
-                "input": "projects/demo/public"
+                "input": "projects/demo/public",
+                "output": "/"
               }
             ],
             "styles": [
@@ -126,7 +127,8 @@
             "assets": [
               {
                 "glob": "**/*",
-                "input": "projects/demo/public"
+                "input": "projects/demo/public",
+                "output": "/"
               }
             ],
             "styles": [
